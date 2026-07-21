@@ -9,7 +9,7 @@
     {"empresa": "ISA Interchile (filial ISA Colombia)", "participacion_vatt_pct": 28, "rol_principal": "Líneas 500 kV Nueva Maitencillo-Nueva Pan de Azúcar y otros corredores del norte-centro. Filial del grupo colombiano ISA.", "ingreso_anual_estimado_musd": 280},
     {"empresa": "Transelec", "participacion_vatt_pct": 38, "rol_principal": "Operador histórico de transmisión troncal, dueño de la mayor parte de la red de 500 kV y 220 kV del centro del país. Controlada por Canadian Pension Plan Investment Board (CPPIB) y Brookfield.", "ingreso_anual_estimado_musd": 380},
     {"empresa": "CGE Transmission (CGE Group)", "participacion_vatt_pct": 12, "rol_principal": "Filial del grupo CGE. Redes zonales en regiones del centro sur.", "ingreso_anual_estimado_musd": 120},
-    {"empresa": "Engie Transmission", "participacion_vct_pct": 8, "rol_principal": "Operación del Sistema Interconectado Central antes de la creación del CEN. Activos zonales.", "ingreso_anual_estimado_musd": 80},
+    {"empresa": "Engie Transmission", "participacion_vatt_pct": 8, "rol_principal": "Operación del Sistema Interconectado Central antes de la creación del CEN. Activos zonales.", "ingreso_anual_estimado_musd": 80},
     {"empresa": "Otros (Chilquinta, Saesa, Edelaysen, Statkraft, etc.)", "participacion_vatt_pct": 14, "rol_principal": "Operadores zonales y de polos de desarrollo", "ingreso_anual_estimado_musd": 140}
   ],
   "vatt_total_sistema_musd_anual": 1000,

@@ -4,7 +4,7 @@ Dashboard de seguimiento sobre el mercado eléctrico mayorista chileno: composic
 
 ## Contenido
 
-- **Dashboard principal** (`index.html`): visualizaciones D3.js sobre composición de la matriz, costos marginales, sistema de transmisión, plan de expansión, concentración de mercado, posiciones regulatorias.
+- **Dashboard principal** (`index.html`): visualizaciones D3.js sobre composición de la matriz, costos marginales, sistema de transmisión, plan de expansión, concentración de mercado, posiciones regulatorias. Diseño editorial "edición impresa" sobre fondo crema con tipografía Fraunces / Inter / JetBrains Mono, paleta de rojo mercantil, verde bosque, oro viejo y púrpura. Numeración romana I–VIII para secciones, folio rotado en margen, pull-quotes, case studies y filtros interactivos en 3 charts (Capacidad, Generación y CMg mensual).
 - **Estudio técnico** (`docs/estudio_mercado_2026Q3.md`): análisis escrito de ~7.000 palabras con marco regulatorio, composición, transmisión, concentración, plan de expansión, posiciones regulatorias.
 - **Plan de actualización** (`docs/plan_actualizacion.md`): cadencia por fuente con tiempos estimados.
 - **Metodología de posiciones** (`docs/metodologia_posiciones.md`): protocolo de panoramas por sector institucional.
@@ -13,7 +13,9 @@ Dashboard de seguimiento sobre el mercado eléctrico mayorista chileno: composic
 
 ```
 Atlas_Mercado_Electrico/
-├── index.html                                  # Dashboard
+├── index.html                                  # Dashboard editorial (14 charts D3.js)
+├── favicon.svg                                 # Rayo estilizado · rojo mercantil
+├── og-preview.png                              # Preview 1200×630 para redes sociales
 ├── data/                                       # 9 JSON con datos primarios
 │   ├── capacidad_instalada.json
 │   ├── generacion_real.json
@@ -29,8 +31,9 @@ Atlas_Mercado_Electrico/
 │   ├── plan_actualizacion.md
 │   ├── metodologia_posiciones.md
 │   └── changelog.md
-├── src/                                       # Reservado para futuro pipeline
-├── assets/                                    # Reservado para imágenes
+├── src/
+│   └── build_og_preview.py                     # Generador del OG preview con PIL
+├── assets/                                     # Reservado para futuras imágenes
 └── README.md
 ```
 
@@ -92,7 +95,8 @@ Miguel Ortiz C.
 - LinkedIn: https://linkedin.com/in/mortizcoilla
 - Email: mortizcoilla@gmail.com
 - WhatsApp: https://wa.me/56933293943
+- Portafolio: https://mortizcoilla.vercel.app/
 
 ---
 
-*Versión actual: v2026Q3 — Lanzamiento 21 de julio de 2026.*
+*Versión actual: v2026Q3.4 — Lanzamiento 21 de julio de 2026.*

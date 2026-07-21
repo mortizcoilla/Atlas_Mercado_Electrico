@@ -1,5 +1,22 @@
 # Changelog — Atlas del Mercado Eléctrico Mayorista
 
+## v2026Q3.4 (21 de julio de 2026) — Bug fixes · etiquetas y datos
+
+### Bug crítico en JSON de VATT
+- **Causa raíz**: en `data/ingreso_tarifario_vatt.json`, el registro de Engie Transmission tenía la llave mal escrita como `participacion_vct_pct` (VCT en vez de VATT). El código lee `participacion_vatt_pct`, por lo que el valor llegaba como `undefined` → `x(undefined) = NaN` → la barra y la etiqueta de Engie quedaban invisibles en el chart FIG. 9. SVG no lanza excepción con NaN en atributos — los elementos simplemente no se renderizan, así que pasaba desapercibido en la vista rápida.
+- **Fix**: corregida la llave a `participacion_vatt_pct` con valor 8.
+- **Verificación**: inspección DOM de los 14 charts con `getAttribute('width')` y `getAttribute('x')` confirmó cero NaN después del fix. Engie Transmission ahora aparece con su barra gris de 8%.
+
+### Etiqueta solapada en FIG. 7 (Precio final)
+- **Causa raíz**: la etiqueta grande "$120" en Fraunces 44px ocupaba desde y≈70 hasta y=100, pero la etiqueta pequeña "USD / MWh" en JetBrains Mono 9px estaba en y=82 — literalmente dentro del bounding box del número grande. Resultado: la unidad se renderizaba superpuesta en la mitad superior del valor.
+- **Fix**: eliminada la etiqueta "USD / MWh" sobre las barras. Era redundante: el eje Y ya muestra `$0, $50, $100, $150` y el símbolo `$` deja implícita la unidad. La cifra grande de cada barra mantiene la prominencia editorial sin ruido visual.
+- **Limpieza adicional**: removidos los `console.log` de debug que había dejado en `drawCliente()` para investigar el bug.
+
+### Verificación de los 14 charts
+- Inspección DOM confirma `ALL CLEAN`: cero atributos NaN en los 14 charts. El bug de Engie explica los `<rect width="NaN">` y `<text x="NaN">` que aparecían en consola y que el navegador silenciosamente descartaba.
+
+---
+
 ## v2026Q3.3 (21 de julio de 2026) — Responsividad, favicon, metadatos y portafolio
 
 ### Responsividad mejorada
@@ -27,7 +44,7 @@
 - **Canonical** link relativo `./`.
 - **DNS prefetch** a `d3js.org` y `preconnect` a Google Fonts.
 - **JSON-LD Article estructurado** con `@context=schema.org`, headline, author con sameAs (LinkedIn, WhatsApp), publisher, citation al CEN/CNE/MINENERGIA, inLanguage, about.
-- **D3.js** ahora se carga con `defer` para no bloquear el render.
+- **D3.js** se carga sin `defer` (síncrono) desde `d3js.org`. Inicialmente se había puesto `defer` para no bloquear el render, pero rompía los charts porque el código inline del dashboard corre antes que d3. Sin `defer` el script bloquea ~50ms pero garantiza el orden correcto de carga.
 
 ### Vínculo visible al portafolio
 - **Callout editorial "Lecturas adicionales"** agregado antes del byline block: caja con border negro de 1px, border-left rojo mercantil de 4px, fondo paper-2. Texto serif italic invitando a explorar más proyectos. Botón con link a `mortizcoilla.vercel.app/` con flecha animada (mueve 4px al hover).
