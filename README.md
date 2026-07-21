@@ -4,7 +4,7 @@ Dashboard de seguimiento sobre el mercado eléctrico mayorista chileno: composic
 
 ## Contenido
 
-- **Dashboard principal** (`index.html`): visualizaciones D3.js sobre composición de la matriz, costos marginales, sistema de transmisión, plan de expansión, concentración de mercado, posiciones regulatorias. Diseño editorial "edición impresa" sobre fondo crema con tipografía Fraunces / Inter / JetBrains Mono, paleta de rojo mercantil, verde bosque, oro viejo y púrpura. Numeración romana I–VIII para secciones, folio rotado en margen, pull-quotes, case studies y filtros interactivos en 3 charts (Capacidad, Generación y CMg mensual).
+- **Dashboard principal** (`index.html`): visualizaciones D3.js sobre composición de la matriz, costos marginales, sistema de transmisión, plan de expansión, concentración de mercado, posiciones regulatorias. Diseño editorial "edición impresa" sobre fondo crema con tipografía Fraunces / Inter / JetBrains Mono, paleta de rojo mercantil, verde bosque, oro viejo y púrpura. Numeración romana I–VIII para secciones, folio rotado en margen, pull-quotes, case studies y filtros interactivos en 3 charts (Capacidad, Generación y CMg mensual). La sección VII usa un **spectrum chart** donde los sectores se distribuyen por stance 1-5 (conservador → reformista), con score de consenso σ por tema y citas expandibles on-click.
 - **Estudio técnico** (`docs/estudio_mercado_2026Q3.md`): análisis escrito de ~7.000 palabras con marco regulatorio, composición, transmisión, concentración, plan de expansión, posiciones regulatorias.
 - **Plan de actualización** (`docs/plan_actualizacion.md`): cadencia por fuente con tiempos estimados.
 - **Metodología de posiciones** (`docs/metodologia_posiciones.md`): protocolo de panoramas por sector institucional.
@@ -99,4 +99,4 @@ Miguel Ortiz C.
 
 ---
 
-*Versión actual: v2026Q3.4 — Lanzamiento 21 de julio de 2026.*
+*Versión actual: v2026Q3.5 — Lanzamiento 21 de julio de 2026.*

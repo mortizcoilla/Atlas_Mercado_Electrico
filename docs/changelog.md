@@ -1,5 +1,57 @@
 # Changelog — Atlas del Mercado Eléctrico Mayorista
 
+## v2026Q3.5 (21 de julio de 2026) — Sec VII: spectrum por sector
+
+### Cambio de paradigma en sección VII
+La sección "Posiciones regulatorias" abandona el formato de cards de texto (que resultaba en 26 bloques pesados, ~3.000 palabras visibles) y adopta un **spectrum chart**: cada tema se mapea en una línea horizontal donde los sectores se distribuyen según su postura agregada (stance 1-5).
+
+### Datos
+- **Scoreo manual de las 26 posiciones** en una escala 1-5 (conservador → reformista), con criterio explícito:
+  - 1 = defiende el status quo (verde bull)
+  - 2 = acepta con ajustes (verde soft)
+  - 3 = neutral técnico (oro warn)
+  - 4 = crítico, pide cambios (merc soft)
+  - 5 = muy crítico, pide transformación (merc)
+- Cada tema incluye un `eje` (label izquierdo) y `eje_der` (label derecho) que describen el espectro.
+- Cada sector tiene `codigo` (3 letras para el chart) y `categoria` (reguladores / industria / academia / política) para habilitar el filtro.
+
+### Visualización
+- **Rail horizontal** con gradiente bull → warn → merc de fondo (opacidad 0.22) como pista visual del espectro.
+- **Ticks sutiles** en las posiciones 1-5 (sin números, los labels de los extremos son suficientes).
+- **Dots** centrados en el track, color interpolado según el stance. **12px de diámetro** con borde 1.5px y sombra.
+- **Clusters apilados**: cuando 2+ sectores comparten el mismo stance, los dots se apilan verticalmente centrados en el track (offset 10px). Los labels se apilan 13px abajo.
+- **Labels en JetBrains Mono** con el código del sector (MIN, CNE, CEN, USM, UCh, etc.).
+- **Consenso σ (desviación estándar)** calculado en vivo para cada tema y mostrado en el header:
+  - σ < 0.6 → "Consenso amplio" (bull)
+  - σ 0.6-1.0 → "Acuerdo moderado" (warn)
+  - σ 1.0-1.4 → "Discrepancia" (warn)
+  - σ > 1.4 → "Polarización" (merc)
+- **Click sobre un dot o label** abre la cita completa en un panel con border-left merc, fondo paper-2, nombre del sector, rol, cita textual, fuente.
+
+### Filtros
+- Barra de filtros arriba del primer spectrum: **Todos / Reguladores / Industria / Academia / Política**.
+- Cuando se activa un filtro, los dots y labels que NO coinciden con la categoría se atenúan (opacity 0.18 / 0.32) sin desaparecer — el usuario sigue viendo el contexto completo pero con foco en la categoría seleccionada.
+
+### Estructura del cambio
+- **Eliminado**: ~95 líneas de CSS para `.pos-tema`, `.pos-tema-hd`, `.pos-grid`, `.pos-card`, `.pos-sector`, `.pos-rol`, `.pos-text`, `.pos-fuente`.
+- **Eliminado**: función `drawPosiciones()` con render de cards (reemplazada por spectrum).
+- **Agregado**: ~140 líneas de CSS para spectrum (rail, dots, labels, filtros, quote panel).
+- **Agregado**: `STANCE_COLOR_SCALE` con interpolación d3 entre bull/warn/merc.
+- **JSON**: agregados campos `eje`, `eje_der`, `stance` a las posiciones; agregados `codigo` y `categoria` a los sectores.
+
+### Lo que el lector ve ahora
+- Antes: 26 cards de texto, ~30 segundos de lectura pesada, ningún patrón visual.
+- Ahora: 5 spectrums compactos (~120px cada uno), patrón visual inmediato (clusters de consenso, outliers de polarización, gradiente de stance), cita expandible bajo demanda. Lectura de patrones en 10 segundos, lectura profunda solo si hace click.
+
+### Hallazgos del scoring
+- T1 (Plan de Expansión): σ=1.16, **bimodal** — 3 reguladores vs 3 industria/academia + 1 oposición.
+- T2 (Integración vertical): σ=1.12, **gradiente parejo** — los 4 sectores se distribuyen sin clusters.
+- T3 (Umbral clientes libres): σ=1.37, **bimodal** — 3 pro-ampliación vs 2 pro-regulación.
+- T4 (Hidroelectricidad): σ=0.89, **acuerdo moderado** — el más consensuado de los 5.
+- T5 (Concentración): σ=1.12, **gradiente parejo** — 4 sectores escalonados.
+
+---
+
 ## v2026Q3.4 (21 de julio de 2026) — Bug fixes · etiquetas y datos
 
 ### Bug crítico en JSON de VATT

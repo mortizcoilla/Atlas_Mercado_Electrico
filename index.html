@@ -828,99 +828,224 @@
     .verdict.flat { color: var(--ink-3); }
 
     /* ============================================================
-       POSICIONES (estilo paper de declaraciones)
+       POSICIONES — Spectrum chart
+       Cada tema es una línea de tiempo horizontal (rail)
+       con dots por sector posicionados por stance (1-5).
        ============================================================ */
-    .pos-tema {
-      margin-top: 44px;
+    .spectrum-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 0 0 28px;
+      padding: 14px 18px;
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
+      align-items: center;
     }
-    .pos-tema-hd {
+    .spectrum-filters .sf-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-right: 4px;
+    }
+    .spectrum-filters button {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      background: transparent;
+      border: 1px solid var(--ink-3);
+      color: var(--ink-2);
+      cursor: pointer;
+      transition: all 0.15s;
+      font-weight: 400;
+    }
+    .spectrum-filters button:hover { background: var(--ink); color: var(--paper-2); border-color: var(--ink); }
+    .spectrum-filters button.active { background: var(--ink); color: var(--paper-2); border-color: var(--ink); }
+
+    .spectrum-tema {
+      margin-top: 36px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--rule-2);
+    }
+    .spectrum-tema:last-child { border-bottom: none; }
+    .sp-hd {
       display: grid;
-      grid-template-columns: 70px 1fr;
-      gap: 20px;
+      grid-template-columns: 60px 1fr auto;
+      gap: 16px;
       align-items: baseline;
-      padding-bottom: 10px;
-      margin-bottom: 18px;
-      border-bottom: 1px solid var(--rule);
+      margin-bottom: 4px;
     }
-    .pos-tema-hd .tn {
+    .sp-hd .sp-num {
       font-family: 'Fraunces', serif;
       font-style: italic;
-      font-size: 36px;
+      font-size: 30px;
       color: var(--merc);
       font-weight: 300;
       letter-spacing: -1px;
     }
-    .pos-tema-hd h3 {
+    .sp-hd h3 {
       font-family: 'Fraunces', serif;
-      font-size: 22px;
+      font-size: 19px;
       font-weight: 400;
       margin: 0;
       color: var(--ink);
-      letter-spacing: -0.3px;
+      letter-spacing: -0.2px;
+      line-height: 1.3;
     }
-    .pos-tema-hd h3 em { font-style: italic; color: var(--merc); }
-    .pos-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0;
-      border-top: 1px solid var(--rule);
+    .sp-hd h3 em { font-style: italic; color: var(--merc); }
+    .sp-hd .sp-consensus {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      text-align: right;
     }
-    .pos-card {
-      padding: 18px 22px;
-      border-right: 1px solid var(--rule-2);
-      border-bottom: 1px solid var(--rule-2);
+    .sp-hd .sp-consensus strong { color: var(--merc); font-weight: 500; }
+
+    .sp-axis-labels {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin: 14px 4px 6px;
     }
-    .pos-card:nth-child(2n) { border-right: none; }
-    .pos-card .pos-sector {
+    .sp-axis-labels .sp-axis-r { text-align: right; max-width: 38%; }
+
+    .sp-rail {
+      position: relative;
+      height: 76px;
+      margin: 0 4px 14px;
+    }
+    .sp-rail .sp-track {
+      position: absolute;
+      top: 36px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--bull) 0%, var(--warn) 50%, var(--merc) 100%);
+      opacity: 0.22;
+    }
+    .sp-rail .sp-tick {
+      position: absolute;
+      top: 32px;
+      width: 1px;
+      height: 10px;
+      background: var(--rule);
+    }
+    .sp-rail .sp-dot {
+      position: absolute;
+      top: 30px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+      border: 1.5px solid var(--paper);
+      box-shadow: 0 0 0 1px rgba(26, 23, 20, 0.4);
+      transition: transform 0.15s, box-shadow 0.15s;
+      z-index: 2;
+    }
+    .sp-rail .sp-dot:hover {
+      transform: translateX(-50%) scale(1.6);
+      z-index: 5;
+      box-shadow: 0 0 0 1.5px var(--ink);
+    }
+    .sp-rail .sp-dot.muted {
+      opacity: 0.18;
+    }
+    .sp-rail .sp-label {
+      position: absolute;
+      top: 56px;
+      transform: translateX(-50%);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: 0.06em;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .sp-rail .sp-label.muted { opacity: 0.32; }
+
+    .sp-quote {
+      display: none;
+      margin-top: 14px;
+      padding: 16px 20px;
+      background: var(--paper-2);
+      border-left: 3px solid var(--merc);
+      position: relative;
+    }
+    .sp-quote.open { display: block; animation: fadeIn 0.2s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+    .sp-quote .sp-q-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .sp-quote .sp-q-name {
+      font-family: 'Fraunces', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .sp-quote .sp-q-close {
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
-      color: var(--merc);
+      color: var(--ink-3);
+      background: none;
+      border: 1px solid var(--ink-3);
+      cursor: pointer;
+      padding: 3px 10px;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin-bottom: 2px;
-      font-weight: 500;
     }
-    .pos-card .pos-rol {
+    .sp-quote .sp-q-close:hover { color: var(--merc); border-color: var(--merc); }
+    .sp-quote .sp-q-rol {
       font-family: 'Fraunces', serif;
       font-style: italic;
-      font-size: 11.5px;
+      font-size: 12px;
       color: var(--ink-3);
       margin-bottom: 10px;
       line-height: 1.4;
     }
-    .pos-card .pos-text {
-      font-size: 13px;
+    .sp-quote .sp-q-text {
+      font-family: 'Fraunces', serif;
+      font-size: 14.5px;
       color: var(--ink-2);
       line-height: 1.6;
-      margin: 0 0 10px;
+      font-weight: 300;
     }
-    .pos-card .pos-text::before {
-      content: '“';
-      font-family: 'Fraunces', serif;
-      color: var(--merc);
-      font-size: 22px;
-      line-height: 0;
-      vertical-align: -8px;
-      margin-right: 2px;
-    }
-    .pos-card .pos-text::after {
-      content: '”';
-      font-family: 'Fraunces', serif;
-      color: var(--merc);
-      font-size: 22px;
-      line-height: 0;
-      vertical-align: -8px;
-      margin-left: 2px;
-    }
-    .pos-card .pos-fuente {
+    .sp-quote .sp-q-text::before { content: '“'; color: var(--merc); font-size: 24px; vertical-align: -7px; margin-right: 3px; font-weight: 400; }
+    .sp-quote .sp-q-text::after { content: '”'; color: var(--merc); font-size: 24px; vertical-align: -7px; margin-left: 3px; font-weight: 400; }
+    .sp-quote .sp-q-fuente {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9.5px;
       color: var(--ink-3);
       padding-top: 8px;
+      margin-top: 12px;
       border-top: 1px dotted var(--rule-2);
       letter-spacing: 0.04em;
     }
-    .pos-card .pos-fuente strong { color: var(--ink-2); font-weight: 500; }
+    .sp-quote .sp-q-fuente strong { color: var(--ink-2); font-weight: 500; }
+    .sp-hint {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      color: var(--ink-4);
+      text-align: right;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: -6px;
+    }
 
     /* ============================================================
        AUTOR (by-line) y FOOTER
@@ -1192,11 +1317,14 @@
       .inline-data .id-cell { border-right: none; border-bottom: 1px solid var(--rule); padding: 0 0 18px; }
       .inline-data .id-cell:last-child { border-bottom: none; padding-bottom: 0; }
       .inline-data .id-cell:first-child { padding-top: 0; }
-      .pos-grid { grid-template-columns: 1fr; }
-      .pos-card { border-right: none; }
-      .pos-tema-hd { grid-template-columns: 50px 1fr; gap: 16px; }
-      .pos-tema-hd .tn { font-size: 28px; }
-      .pos-tema-hd h3 { font-size: 19px; }
+      .spectrum-filters { padding: 10px 12px; }
+      .spectrum-filters button { font-size: 9px; padding: 5px 9px; }
+      .sp-hd { grid-template-columns: 50px 1fr; }
+      .sp-hd .sp-num { font-size: 26px; }
+      .sp-hd h3 { font-size: 16px; }
+      .sp-hd .sp-consensus { grid-column: 1 / -1; text-align: left; }
+      .sp-axis-labels { font-size: 8.5px; }
+      .sp-rail .sp-label { font-size: 8.5px; }
       .byline-block { grid-template-columns: 1fr; gap: 20px; padding: 28px 0 24px; }
       .byline-block .bl-info .bl-name { font-size: 26px; }
       .byline-block .bl-links { flex-wrap: wrap; }
@@ -1239,7 +1367,6 @@
       .chart-filter button.reset { width: 100%; margin: 6px 0 0; text-align: center; }
       .byline-block .bl-name { font-size: 22px; }
       .byline-block .bl-links a { font-size: 9.5px; padding: 7px 10px; }
-      .pos-card { padding: 14px 16px; }
       .case { padding: 14px 18px 14px 18px; }
       .case h4 { font-size: 17px; }
       .figure-foot { font-size: 12px; }
@@ -1261,7 +1388,10 @@
       .stat-card .sc-val { font-size: 30px; }
       .byline-block .bl-links { gap: 6px; }
       .byline-block .bl-links a { font-size: 9px; padding: 6px 9px; }
-      .pos-card .pos-text { font-size: 12.5px; }
+      .sp-rail { height: 70px; }
+      .sp-rail .sp-label { font-size: 8px; }
+      .sp-quote { padding: 14px 16px; }
+      .sp-quote .sp-q-text { font-size: 13px; }
       .paper-table { font-size: 12px; }
       .paper-table thead th, .paper-table tbody td { padding: 8px 8px; }
       .paper-table .num { font-size: 11px; }
@@ -1672,11 +1802,20 @@
     <div class="sec-hd">
       <div class="sec-num">VII</div>
       <div class="sec-titles">
-        <h2>Posiciones regulatorias · <em>panoramas por sector</em></h2>
-        <div class="sec-tag">5 temas · 13 sectores institucionales · sin declaraciones individuales</div>
+        <h2>Posiciones regulatorias · <em>spectrum por sector</em></h2>
+        <div class="sec-tag">5 temas · 13 sectores · 26 posturas agregadas · scoring 1–5</div>
       </div>
     </div>
-    <p class="sec-lead">Esta sección documenta dónde está cada sector institucional sobre temas clave del mercado eléctrico y la transmisión. Las posiciones se construyen a partir de documentos oficiales (oficios del Ministerio al Congreso, resoluciones de la CNE, fallos del TDLC, papers de la academia, comunicados de gremios). <strong>No son declaraciones individuales sino posturas agregadas.</strong> El contraste entre sectores permite identificar acuerdos y discrepancias verificables.</p>
+    <p class="sec-lead">Cada tema se mapea en un eje (conservador · técnico · reformista). Los puntos representan la postura agregada de cada sector institucional, derivada de documentos oficiales. <strong>Click sobre un punto para abrir la cita.</strong> El contraste horizontal muestra acuerdos y discrepancias verificables.</p>
+
+    <div class="spectrum-filters" id="spectrum-filters">
+      <span class="sf-label">Filtro</span>
+      <button data-cat="all" class="active">Todos</button>
+      <button data-cat="reguladores">Reguladores</button>
+      <button data-cat="industria">Industria</button>
+      <button data-cat="academia">Academia</button>
+      <button data-cat="politica">Política</button>
+    </div>
 
     <div id="posiciones-container"></div>
   </section>
@@ -2525,27 +2664,121 @@
   }
 
   /* ============================================================
-     POSICIONES
+     POSICIONES — Spectrum chart
+     Cada tema se mapea en una línea de tiempo horizontal.
+     Stance 1-5 (conservador → reformista), color del dot
+     interpola entre bull (verde) y merc (rojo).
      ============================================================ */
+  const STANCE_COLOR_SCALE = d3.scaleLinear()
+    .domain([1, 2.5, 4, 5])
+    .range(['#2c5f3f', '#9bbfa9', '#d4a59a', '#a82e1f'])
+    .interpolate(d3.interpolateRgb);
+
   async function drawPosiciones() {
     const data = await loadJSON('data/posiciones_mercado.json');
     const container = d3.select('#posiciones-container');
     const sectores = {};
     data.sectores_institucionales.forEach(s => { sectores[s.id] = s; });
+
     data.posiciones_por_tema.forEach((tema, i) => {
-      const bloque = container.append('div').attr('class', 'pos-tema');
-      const hd = bloque.append('div').attr('class', 'pos-tema-hd');
-      hd.append('div').attr('class', 'tn').text('T' + (i + 1));
-      hd.append('h3').html(tema.tema);
-      const grid = bloque.append('div').attr('class', 'pos-grid');
+      // Calcular consenso (desviación estándar de los stances)
+      const stances = tema.posiciones.map(p => p.stance);
+      const mean = stances.reduce((a, b) => a + b, 0) / stances.length;
+      const variance = stances.reduce((a, b) => a + (b - mean) ** 2, 0) / stances.length;
+      const std = Math.sqrt(variance);
+      let consensusLabel, consensusClass;
+      if (std < 0.6)      { consensusLabel = 'Consenso amplio';   consensusClass = 'c-bull'; }
+      else if (std < 1.0) { consensusLabel = 'Acuerdo moderado';  consensusClass = 'c-warn'; }
+      else if (std < 1.4) { consensusLabel = 'Discrepancia';      consensusClass = 'c-warn'; }
+      else                { consensusLabel = 'Polarización';      consensusClass = 'c-merc'; }
+
+      const bloque = container.append('div').attr('class', 'spectrum-tema');
+      // Header
+      const hd = bloque.append('div').attr('class', 'sp-hd');
+      hd.append('div').attr('class', 'sp-num').text('T' + (i + 1));
+      hd.append('h3').text(tema.tema);
+      hd.append('div').attr('class', 'sp-consensus ' + consensusClass)
+        .html('σ = ' + std.toFixed(2) + ' · ' + consensusLabel);
+      // Axis labels
+      bloque.append('div').attr('class', 'sp-axis-labels')
+        .html('<span class="sp-axis-l">' + tema.eje + '</span><span class="sp-axis-r">' + tema.eje_der + '</span>');
+      // Hint
+      bloque.append('div').attr('class', 'sp-hint').text('Click en un punto para abrir la cita');
+      // Rail
+      const railWrap = bloque.append('div').attr('class', 'sp-rail');
+      // Track gradient
+      railWrap.append('div').attr('class', 'sp-track');
+      // Ticks sutiles
+      [1, 2, 3, 4, 5].forEach(v => {
+        const xPct = ((v - 1) / 4) * 100;
+        railWrap.append('div').attr('class', 'sp-tick').style('left', xPct + '%');
+      });
+      // Dots + labels: agrupar por x para evitar solapamiento
+      const clusterMap = {};
       tema.posiciones.forEach(p => {
-        const sec = sectores[p.sector];
-        if (!sec) return;
-        const card = grid.append('div').attr('class', 'pos-card');
-        card.append('div').attr('class', 'pos-sector').text(sec.nombre);
-        card.append('div').attr('class', 'pos-rol').text(sec.rol);
-        card.append('div').attr('class', 'pos-text').text(p.posicion);
-        card.append('div').attr('class', 'pos-fuente').html('<strong>Fuente ·</strong> ' + p.fuente);
+        const xPct = ((p.stance - 1) / 4) * 100;
+        if (!clusterMap[xPct]) clusterMap[xPct] = [];
+        clusterMap[xPct].push(p);
+      });
+      const maxStack = Math.max(...Object.values(clusterMap).map(a => a.length));
+      // Ajustar altura del rail según el stack máximo
+      const neededHeight = 60 + maxStack * 13 + 4;
+      railWrap.style('height', Math.max(76, neededHeight) + 'px');
+
+      Object.entries(clusterMap).forEach(([xPct, ps]) => {
+        ps.forEach((p, idx) => {
+          const sec = sectores[p.sector];
+          if (!sec) return;
+          const dotY = 30 + (idx - (ps.length - 1) / 2) * 10;  // centrar stack en track
+          const labelY = 60 + idx * 13;                        // stack de labels debajo
+          const dot = railWrap.append('div')
+            .attr('class', 'sp-dot')
+            .attr('data-cat', sec.categoria)
+            .attr('data-sector', sec.id)
+            .style('left', xPct + '%')
+            .style('top', dotY + 'px')
+            .style('background', STANCE_COLOR_SCALE(p.stance))
+            .attr('title', sec.nombre + ' · stance ' + p.stance);
+          const label = railWrap.append('div')
+            .attr('class', 'sp-label')
+            .attr('data-cat', sec.categoria)
+            .attr('data-sector', sec.id)
+            .style('left', xPct + '%')
+            .style('top', labelY + 'px')
+            .text(sec.codigo);
+          // Click: open quote
+          const openQuote = () => {
+            bloque.selectAll('.sp-quote').remove();
+            const q = bloque.append('div').attr('class', 'sp-quote open');
+            const head = q.append('div').attr('class', 'sp-q-head');
+            head.append('div').attr('class', 'sp-q-name').text(sec.nombre);
+            const btnClose = head.append('button').attr('class', 'sp-q-close').text('Cerrar ×');
+            btnClose.on('click', () => q.remove());
+            q.append('div').attr('class', 'sp-q-rol').text(sec.rol);
+            q.append('div').attr('class', 'sp-q-text').text(p.posicion);
+            q.append('div').attr('class', 'sp-q-fuente').html('<strong>Fuente ·</strong> ' + p.fuente);
+          };
+          dot.on('click', openQuote);
+          label.on('click', openQuote);
+          label.style('cursor', 'pointer');
+          label.style('pointer-events', 'auto');
+        });
+      });
+    });
+
+    // Filtros
+    d3.selectAll('#spectrum-filters button').each(function() {
+      const btn = d3.select(this);
+      btn.on('click', () => {
+        d3.selectAll('#spectrum-filters button').classed('active', false);
+        btn.classed('active', true);
+        const cat = btn.attr('data-cat');
+        d3.selectAll('.sp-dot, .sp-label').each(function() {
+          const el = d3.select(this);
+          const isAll = cat === 'all';
+          const matches = isAll || el.attr('data-cat') === cat;
+          el.classed('muted', !matches);
+        });
       });
     });
   }
