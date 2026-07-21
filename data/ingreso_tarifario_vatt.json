@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "titulo": "Ingreso tarifario de transmisión (VATT y AVI) por empresa",
+    "fuente_principal": "Comisión Nacional de Energía (CNE) - Informes de Valorización de Instalaciones de Transmisión",
+    "definicion": "VATT = Valor Agregado de Transmisión Troncal. AVI = Anualidad del Valor de Inversión. Es la remuneración que reciben los propietarios de líneas de transmisión troncal por hacer disponibles sus instalaciones al sistema eléctrico. Lo pagan todos los usuarios del SEN proporcionalmente a su consumo.",
+    "actualizado": "2026-04"
+  },
+  "vatt_por_empresa_2025": [
+    {"empresa": "ISA Interchile (filial ISA Colombia)", "participacion_vatt_pct": 28, "rol_principal": "Líneas 500 kV Nueva Maitencillo-Nueva Pan de Azúcar y otros corredores del norte-centro. Filial del grupo colombiano ISA.", "ingreso_anual_estimado_musd": 280},
+    {"empresa": "Transelec", "participacion_vatt_pct": 38, "rol_principal": "Operador histórico de transmisión troncal, dueño de la mayor parte de la red de 500 kV y 220 kV del centro del país. Controlada por Canadian Pension Plan Investment Board (CPPIB) y Brookfield.", "ingreso_anual_estimado_musd": 380},
+    {"empresa": "CGE Transmission (CGE Group)", "participacion_vatt_pct": 12, "rol_principal": "Filial del grupo CGE. Redes zonales en regiones del centro sur.", "ingreso_anual_estimado_musd": 120},
+    {"empresa": "Engie Transmission", "participacion_vct_pct": 8, "rol_principal": "Operación del Sistema Interconectado Central antes de la creación del CEN. Activos zonales.", "ingreso_anual_estimado_musd": 80},
+    {"empresa": "Otros (Chilquinta, Saesa, Edelaysen, Statkraft, etc.)", "participacion_vatt_pct": 14, "rol_principal": "Operadores zonales y de polos de desarrollo", "ingreso_anual_estimado_musd": 140}
+  ],
+  "vatt_total_sistema_musd_anual": 1000,
+  "interpretacion": "El VATT total del sistema es aproximadamente US$1.000 millones anuales. Transelec e ISA Interchile concentran dos tercios del ingreso tarifario troncal. La estructura es oligopólica: pocas firmas dueñas de infraestructura monopólica natural.",
+  "marco_normativo_vatt": {
+    "definicion_legal": "LGSE Art. 114° y siguientes. El VATT se determina cada cuatro años por la CNE mediante un estudio de valorización de instalaciones.",
+    "ultimo_estudio_vatt": "CNE 2024-2027, vigente desde 2025",
+    "metodologia": "Costo de reposición a nuevo depreciado (CRAND) - asume que las instalaciones se reemplazarían hoy con tecnología equivalente",
+    "frecuencia_actualizacion": "Cada 4 años por ley. La actualización del próximo ciclo 2028-2031 está en proceso.",
+    "tasa_descuento_vi": "10% real anual (rentabilidad esperada para el inversionista)",
+    "factor_de_ajuste": "Factor X de eficiencia, que ajusta la rentabilidad esperada por mejoras de productividad (típicamente 0,5-1,5% anual)"
+  },
+  "ingreso_por_segmento_2025": [
+    {"segmento": "Transmisión nacional (500 kV)", "vatt_musd": 550, "participacion_pct": 55, "principales_activos": "Líneas troncales, subestaciones 500 kV"},
+    {"segmento": "Transmisión zonal A (norte)", "vatt_musd": 95, "participacion_pct": 9.5, "principales_activos": "Redes de Arica a Antofagasta"},
+    {"segmento": "Transmisión zonal B (norte chico)", "vatt_musd": 75, "participacion_pct": 7.5, "principales_activos": "Atacama y Coquimbo"},
+    {"segmento": "Transmisión zonal C/D/E (centro)", "vatt_musd": 180, "participacion_pct": 18, "principales_activos": "Valparaíso, RM, O'Higgins, Maule, Ñuble"},
+    {"segmento": "Transmisión zonal F (sur)", "vatt_musd": 100, "participacion_pct": 10, "principales_activos": "Biobío, Araucanía, Los Lagos"}
+  ],
+  "concentracion_mercado_transmision": {
+    "hhi_calculado_top_3_pct": 78,
+    "interpretacion": "El segmento de transmisión es un oligopolio natural. El Estado no controla las firmas transmisoras, pero sí regula el precio (VATT) y los planes de expansión (vía decreto del Ministerio de Energía).",
+    "limitacion_constitucional": "El régimen de concesiones (LGSE Art. 17°) hace que las instalaciones de transmisión sean bienes nacionales de uso público. La concesionaria tiene la obligación de servicio, pero el precio está regulado."
+  },
+  "debate_sobre_nacionalizacion": {
+    "contexto": "Entre 2022 y 2025, sectores de izquierda (FA, PC) plantearon la nacionalización de la transmisión como eje programático. La propuesta implicaba que el Estado adquiriera los activos de transmisión troncal.",
+    "argumentos_a_favor": "El control estatal facilitaría la planificación centralizada, eliminaría la barrera de rentabilidad privada para proyectos no rentables, y reduciría la vulnerabilidad operativa expuesta por el 25-F.",
+    "argumentos_en_contra": "La adquisición estatal tendría un costo fiscal alto (US$5-10 mil millones según valorización). El sistema actual con regulación por VATT ya permite planificación centralizada (vía Plan de Expansión). El Estado chileno no tiene tradición de operar infraestructura monopólica de transmisión.",
+    "estado_2026": "El debate bajó de intensidad tras el cambio de gobierno. La propuesta no avanzó en el Congreso. Kast no la ha retomado."
+  },
+  "interpretacion_estructural": "El mercado de transmisión chileno es estructuralmente concentrado: pocas firmas dueñas de infraestructura monopólica natural, reguladas por un VATT fijado cada 4 años. La tensión histórica entre propiedad privada con rentabilidad regulada y propiedad estatal con control directo no se ha resuelto. La reforma a la planificación (Ley 20.936/2016) fortaleció la rectoría estatal sin tocar la propiedad de los activos.",
+  "fuentes": [
+    {"id": 1, "medio": "CNE - Informes de Valorización de Instalaciones de Transmisión 2024-2027", "url": "https://www.cne.cl/es/tarificacion/electrica/st/"},
+    {"id": 2, "medio": "CNE - Regulación del Segmento de Transmisión en Chile", "url": "https://www.cne.cl/wp-content/uploads/2015/07/regulacion_segmento_transmision.pdf"},
+    {"id": 3, "medio": "BCN - Revisión del Segmento de Transmisión", "url": "https://www.bcn.cl/obtienearchivo?id=repositorio/10221/37302/1/BCN___Revision_del_estado_actual_del_Segmento_de_transmision_electrica.pdf"},
+    {"id": 4, "medio": "MINENERGIA - Decreto 354 Plan 2024", "url": "https://electromineria.cl/ministerio-energia-fija-23-obras-nuevas-transmision-nacional-zonal-plan-expansion-2024/"},
+    {"id": 5, "medio": "Transelec Reporte Integrado 2024", "url": "https://www.transelec.cl/reporte-integrado-2024/"}
+  ]
+}

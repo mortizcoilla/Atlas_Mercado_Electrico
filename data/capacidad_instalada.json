@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "titulo": "Capacidad instalada de generación del SEN por empresa y tecnología",
+    "fuente_principal": "Coordinador Eléctrico Nacional (CEN) - Informe de Monitoreo de la Competencia 2025",
+    "cobertura": "Sistema Eléctrico Nacional, dic 2025",
+    "actualizado": "2026-04"
+  },
+  "capacidad_total_mw_evolucion": [
+    {"año": 2010, "total": 16000, "termica": 11500, "hidrica": 5300, "solar": 0, "eolica": 0, "ernc_pct": 5.0},
+    {"año": 2012, "total": 17200, "termica": 12300, "hidrica": 5400, "solar": 50, "eolica": 200, "ernc_pct": 7.0},
+    {"año": 2014, "total": 18800, "termica": 12800, "hidrica": 5500, "solar": 400, "eolica": 500, "ernc_pct": 8.5},
+    {"año": 2016, "total": 20100, "termica": 13400, "hidrica": 5500, "solar": 1000, "eolica": 900, "ernc_pct": 11.5},
+    {"año": 2018, "total": 22800, "termica": 13200, "hidrica": 5600, "solar": 2200, "eolica": 1800, "ernc_pct": 21.0},
+    {"año": 2020, "total": 27200, "termica": 12600, "hidrica": 6100, "solar": 4500, "eolica": 2500, "ernc_pct": 30.0},
+    {"año": 2022, "total": 32600, "termica": 12900, "hidrica": 6500, "solar": 7800, "eolica": 4900, "ernc_pct": 39.5},
+    {"año": 2024, "total": 36778, "termica": 12500, "hidrica": 7567, "solar": 10716, "eolica": 5270, "ernc_pct": 50.3},
+    {"año": 2025, "total": 39104, "termica": 12889, "hidrica": 7550, "solar": 12222, "eolica": 6349, "ernc_pct": 48.0}
+  ],
+  "capacidad_dic_2025_detalle": {
+    "total_mw": 39104,
+    "por_tecnologia": [
+      {"tecnologia": "Solar fotovoltaica", "mw": 12222, "pct": 31.3},
+      {"tecnologia": "Eólica", "mw": 6349, "pct": 16.2},
+      {"tecnologia": "Hídrica total", "mw": 7550, "pct": 19.3},
+      {"tecnologia": "Hídrica embalse", "mw": 3515, "pct": 9.0},
+      {"tecnologia": "Hídrica pasada", "mw": 4035, "pct": 10.3},
+      {"tecnologia": "Térmica total", "mw": 12889, "pct": 33.0},
+      {"tecnologia": "Gas natural", "mw": 5266, "pct": 13.5},
+      {"tecnologia": "Carbón", "mw": 3515, "pct": 9.0},
+      {"tecnologia": "Diésel", "mw": 3087, "pct": 7.9},
+      {"tecnologia": "Otros térmicos", "mw": 906, "pct": 2.3},
+      {"tecnologia": "Termosolar", "mw": 114, "pct": 0.3},
+      {"tecnologia": "Geotérmica", "mw": 95, "pct": 0.2}
+    ],
+    "almacenamiento_bess_mw": 1529,
+    "bess_principales_actores": [
+      {"empresa": "Engie", "mw": 355},
+      {"empresa": "AES Andes", "mw": 340}
+    ]
+  },
+  "participacion_por_empresa_dic_2025": [
+    {"empresa": "Enel", "mw_estimado": 9268, "pct_capacidad": 23.7, "nota": "Líder absoluto, casi duplica al segundo"},
+    {"empresa": "Grupo Matte (Colbún)", "mw_estimado": 4575, "pct_capacidad": 11.7, "nota": "Control vía Colbún y otras filiales"},
+    {"empresa": "AES Corporation", "mw_estimado": 3091, "pct_capacidad": 7.9, "nota": "AES Andes tras cambio de marca"},
+    {"empresa": "Engie", "mw_estimado": 2816, "pct_capacidad": 7.2, "nota": "Foco creciente en BESS"},
+    {"empresa": "EDF", "mw_estimado": 1330, "pct_capacidad": 3.4, "nota": ""},
+    {"empresa": "Mainstream Renewable Power", "mw_estimado": 1251, "pct_capacidad": 3.2, "nota": "Puro eólico"},
+    {"empresa": "EnfraGen (ex Prime Energía)", "mw_estimado": 900, "pct_capacidad": 2.3, "nota": ""},
+    {"empresa": "Sonnedix", "mw_estimado": 700, "pct_capacidad": 1.8, "nota": "Solar"},
+    {"empresa": "Tamakaya Energía", "mw_estimado": 700, "pct_capacidad": 1.8, "nota": ""},
+    {"empresa": "Otros (PMGD + pequeñas)", "mw_estimado": 14473, "pct_capacidad": 37.0, "nota": "Miles de generadores distribuidos"}
+  ],
+  "concentracion_4_principales": {
+    "pct_dic_2025": 50.5,
+    "pct_dic_2024": 52.3,
+    "interpretacion": "Los 4 conglomerados principales (Enel, Grupo Matte, AES, Engie) concentran la mitad de la capacidad del SEN. La concentración ha bajado levemente por el ingreso de nuevos actores (Mainstream, Sonnedix, Tamakaya) en solar y eólico."
+  },
+  "limites_integracion_vertical": {
+    "individual_generador_en_transmision_nacional_pct": 8,
+    "maximo_conjunto_generador_transmisor_pct": 40,
+    "fuente": "Art. 7° Ley 20.936/2016",
+    "objetivo": "Evitar conductas estratégicas de empresas integradas verticalmente"
+  },
+  "interpretacion": "El mercado chileno de generación se caracteriza por: (a) alta concentración estructural en 4 conglomerados, (b) entrada creciente de nuevos actores en solar/eólico que reduce gradualmente la concentración, (c) límites legales a la integración vertical, (d) libre entrada con regulación ambiental y permisos sectoriales. La caída del HHI en los últimos años es consecuencia de la transición tecnológica más que de una política antimonopolio explícita.",
+  "fuentes": [
+    {"id": 1, "medio": "CEN - Informe de Monitoreo 2025", "url": "https://www.coordinador.cl/wp-content/uploads/2026/04/Informe-Monitoreo-2025.pdf"},
+    {"id": 2, "medio": "CEN - Reporte Anual Desempeño 2024", "url": "https://www.coordinador.cl/wp-content/uploads/2025/04/CEN-Reporte-Art-72-15-ano-2024.pdf"},
+    {"id": 3, "medio": "CEN - Balance del SEN 2025", "url": "https://www.coordinador.cl/wp-content/uploads/2026/03/2025-12-29-CONFERENCIA-DE-PRENSA.pdf"},
+    {"id": 4, "medio": "GIE Reporte Mensual Generación Dic 2025", "url": "https://www.gie.cl/wp-content/uploads/2026/02/Reporte-Mensual-GIE-Systep-Diciembre-2025-Enero-2026.pdf"},
+    {"id": 5, "medio": "Revista Electricidad - Cuarto Generadores concentran 65%", "url": "https://www.revistaei.cl/cuatro-generadores-concentra-el-65-de-la-capacidad-instalada-en-el-sistema-electrico-local/"}
+  ]
+}

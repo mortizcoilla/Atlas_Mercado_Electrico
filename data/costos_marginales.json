@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "titulo": "Costos Marginales del SEN por barra representativa",
+    "fuente_principal": "Coordinador Eléctrico Nacional (CEN) - Reportes Mensuales",
+    "definicion": "Costo Marginal (CMg) es el costo variable de la unidad más cara de generación operando en un instante dado. Es el precio spot del mercado mayorista.",
+    "barras_referencia": ["Crucero 220 kV (norte)", "Pan de Azúcar 220 kV (norte chico)", "Quillota 220 kV (centro)", "Charrúa 220 kV (centro sur)", "Puerto Montt 220 kV (sur)"],
+    "actualizado": "2025-12"
+  },
+  "serie_anual_promedio_usd_mwh": [
+    {"año": 2017, "crucero": 38.0, "pan_azucar": null, "quillota": 51.0, "puerto_montt": 78.0, "interpretacion": "Pre-apagón general, gas dominante"},
+    {"año": 2018, "crucero": 44.0, "pan_azucar": null, "quillota": 56.0, "puerto_montt": 85.0, "interpretacion": "Verano seco, gas más caro"},
+    {"año": 2019, "crucero": 42.0, "pan_azucar": null, "quillota": 49.0, "puerto_montt": 73.0, "interpretacion": ""},
+    {"año": 2020, "crucero": 35.0, "pan_azucar": null, "quillota": 38.0, "puerto_montt": 54.0, "interpretacion": "Pandemia, demanda cae"},
+    {"año": 2021, "crucero": 81.0, "pan_azucar": 75.0, "quillota": 71.0, "puerto_montt": 88.0, "interpretacion": "Megasequía peak, gas domina, decreto de racionamiento"},
+    {"año": 2022, "crucero": 65.0, "pan_azucar": 60.0, "quillota": 56.0, "puerto_montt": 71.0, "interpretacion": "Recuperación parcial"},
+    {"año": 2023, "crucero": 50.0, "pan_azucar": 47.0, "quillota": 41.0, "puerto_montt": 56.0, "interpretacion": "El Niño recupera embalses"},
+    {"año": 2024, "crucero": 38.0, "pan_azucar": 37.0, "quillota": 38.0, "puerto_montt": 56.0, "interpretacion": "Más solar y eólica, menores CMg"},
+    {"año": 2025, "crucero": 65.0, "pan_azucar": 62.0, "quillota": 70.0, "puerto_montt": 90.0, "interpretacion": "Hidro cae 25%, térmico compensa, CMg suben"}
+  ],
+  "serie_mensual_2024_2025": [
+    {"mes": "ene 2024", "crucero": 35.0, "pan_azucar": 33.0, "quillota": 35.0, "puerto_montt": 51.0},
+    {"mes": "mar 2024", "crucero": 36.0, "pan_azucar": 34.0, "quillota": 36.0, "puerto_montt": 53.0},
+    {"mes": "jun 2024", "crucero": 54.0, "pan_azucar": 50.0, "quillota": 54.0, "puerto_montt": 80.0},
+    {"mes": "sep 2024", "crucero": 32.0, "pan_azucar": 30.0, "quillota": 33.0, "puerto_montt": 50.0},
+    {"mes": "dic 2024", "crucero": 37.7, "pan_azucar": null, "quillota": 36.8, "puerto_montt": 56.2},
+    {"mes": "ene 2025", "crucero": 48.0, "pan_azucar": 45.0, "quillota": 47.0, "puerto_montt": 60.0},
+    {"mes": "mar 2025", "crucero": 60.0, "pan_azucar": 57.0, "quillota": 65.0, "puerto_montt": 75.0},
+    {"mes": "may 2025", "crucero": 65.0, "pan_azucar": 60.5, "quillota": 61.7, "puerto_montt": 101.2},
+    {"mes": "jun 2025", "crucero": 90.7, "pan_azucar": 85.0, "quillota": 112.9, "puerto_montt": 110.0},
+    {"mes": "sep 2025", "crucero": 70.0, "pan_azucar": 67.0, "quillota": 75.0, "puerto_montt": 95.0},
+    {"mes": "nov 2025", "crucero": 60.0, "pan_azucar": 58.0, "quillota": 65.0, "puerto_montt": 85.0}
+  ],
+  "interpretacion_2025": "El año 2025 muestra un alza significativa de los CMg respecto a 2024 (40-100% según barra y mes), driven por la caída del 25% en la generación hidroeléctrica y la necesidad de mayor despacho térmico. Quillota 220 kV en junio 2025 alcanzó 112,87 USD/MWh, +110% vs mismo mes 2024. Este aumento expone la vulnerabilidad del sistema cuando la hidrología cae y la flexibilidad operativa (almacenamiento distribuido) aún es insuficiente.",
+  "estructura_marginal_2024": {
+    "horas_con_cmg_cero_o_negativo": 25.8,
+    "interpretacion": "El 25,8% de las horas en Quillota 220 kV, el CMg fue fijado por centrales con costo variable cercano a cero (solar, eólica, hidro pasada en horas de agua). Es la manifestación directa de la inserción renovable en el mercado spot."
+  },
+  "diferencial_norte_sur": {
+    "valor_promedio_2024_2025_usd_mwh": 18.9,
+    "interpretacion": "La diferencia promedio entre Charrúa y Puerto Montt refleja la congestión del corredor centro-sur. Cuando el sur no puede evacuar su energía, debe operar generación local más cara.",
+    "fuente": "Generadoras de Chile Boletín mayo 2025"
+  },
+  "fuentes": [
+    {"id": 1, "medio": "CEN - Costos Marginales (datos horarios)", "url": "https://www.coordinador.cl/costos-marginales/"},
+    {"id": 2, "medio": "Energía Abierta - Costo marginal diario por barra", "url": "http://energiaabierta.cl/visualizaciones/costo-marginal-promedio-diario/"},
+    {"id": 3, "medio": "CNE - Reporte Energético Financiero", "url": "https://www.cne.cl/wp-content/uploads/2025/07/RT_Financiero_v20252T.pdf"},
+    {"id": 4, "medio": "GPM - Informe Valorización de Transferencias Económicas", "url": "https://gpm-ag.cl/wp-content/uploads/2024/04/IVT_Marzo_2024_Pre.pdf"},
+    {"id": 5, "medio": "Generadoras de Chile Boletín mayo 2025", "url": "https://generadoras.cl/wp-content/uploads/2025/06/BoletinGeneradorasdeChile_30062025.pdf"},
+    {"id": 6, "medio": "CEN Reporte Energético SEN Ene 2025", "url": "https://www.coordinador.cl/wp-content/uploads/2025/01/CEN_Reporte_Energetico_SEN_Ene25.pdf"}
+  ]
+}

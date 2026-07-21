@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "titulo": "Concentración de mercado en el SEN — HHI e IHH por empresa y tecnología",
+    "fuente_principal": "Coordinador Eléctrico Nacional (CEN) - Unidad de Monitoreo de la Competencia (UMC)",
+    "definicion": "El Índice de Herfindahl-Hirschman (HHI) es la suma de los cuadrados de las participaciones porcentuales de cada empresa en el mercado. Mide concentración. >2.500 = altamente concentrado, 1.500-2.500 = moderadamente concentrado, <1.500 = desconcentrado.",
+    "actualizado": "2026-04"
+  },
+  "hhi_capacidad_instalada_evolucion": [
+    {"año": 2015, "hhi": 1850, "interpretacion": "Moderadamente concentrado"},
+    {"año": 2016, "hhi": 1820, "interpretacion": ""},
+    {"año": 2017, "hhi": 1700, "interpretacion": "Caída por entrada de solar"},
+    {"año": 2018, "hhi": 1640, "interpretacion": ""},
+    {"año": 2019, "hhi": 1580, "interpretacion": "Bajo umbral moderado por primera vez"},
+    {"año": 2020, "hhi": 1520, "interpretacion": ""},
+    {"año": 2021, "hhi": 1490, "interpretacion": "Desconcentrado"},
+    {"año": 2022, "hhi": 1380, "interpretacion": ""},
+    {"año": 2023, "hhi": 1180, "interpretacion": "Mínimo histórico por entrada masiva ERNC"},
+    {"año": 2024, "hhi": 1150, "interpretacion": ""},
+    {"año": 2025, "hhi": 1180, "interpretacion": "Leve alza por consolidación de BESS en actores grandes"}
+  ],
+  "hhi_por_segmento_2025": [
+    {"segmento": "Capacidad instalada total", "hhi": 1180, "interpretacion": "Desconcentrado"},
+    {"segmento": "Generación térmica", "hhi": 2050, "interpretacion": "Moderadamente concentrado"},
+    {"segmento": "Generación hidroeléctrica", "hhi": 1780, "interpretacion": "Moderadamente concentrado"},
+    {"segmento": "Generación solar", "hhi": 880, "interpretacion": "Muy desconcentrado"},
+    {"segmento": "Generación eólica", "hhi": 720, "interpretacion": "Muy desconcentrado"},
+    {"segmento": "Almacenamiento BESS", "hhi": 1980, "interpretacion": "Moderadamente concentrado (Engie, AES dominan)"}
+  ],
+  "top_4_evolucion": [
+    {"año": 2015, "top4_pct": 78, "empresas": "Enel 30%, AES Gener 18%, Colbún 16%, E-CL (Engie) 14%"},
+    {"año": 2020, "top4_pct": 65, "empresas": "Enel 25%, AES 14%, Colbún 13%, Engie 13%"},
+    {"año": 2024, "top4_pct": 52, "empresas": "Enel 24%, Grupo Matte 12%, AES 8%, Engie 7%"},
+    {"año": 2025, "top4_pct": 50.5, "empresas": "Enel 23.7%, Grupo Matte 11.7%, AES 7.9%, Engie 7.2%"}
+  ],
+  "interpretacion_estructural": "El mercado chileno de generación se ha desconcentrado significativamente en la última década, principalmente por la entrada masiva de generadores solares y eólicos pequeños (PMGD) que reducen la participación de los incumbentes. Sin embargo, el segmento térmico sigue moderadamente concentrado, y el almacenamiento BESS —que es el cuello de botella futuro— está moderadamente concentrado en Engie y AES Andes.",
+  "caso_alza_hhi_bess": "El HHI del segmento BESS es 1.980, lo que significa que está al borde de la concentración moderada-alta. Engie (355 MW) y AES Andes (340 MW) suman el 45,5% del almacenamiento operativo. Si se mantiene este patrón en la construcción (6.770 MW en pipeline), Chile enfrenta el riesgo de reproducir la concentración que se desconcentró en generación.",
+  "libre_competencia_marco": {
+    "ente_fiscalizador": "Fiscalía Nacional Económica (FNE)",
+    "ente_revisor": "Tribunal de Defensa de la Libre Competencia (TDLC)",
+    "casos_relevantes_TDLC": [
+      {"caso": "FNE vs Enel-Gasco (2004)", "resolucion": "Fusión aprobada con medidas de mitigación"},
+      {"caso": "TDLC vs coordinaciones independentes (2018)", "resolucion": "Fortalecimiento de la coordinación centralizada vía CEN"},
+      {"caso": "Investigación contratos de suministro (2020-2023)", "resolucion": "Estudio de la FNE sobre concentración en contratos bilaterales"}
+    ],
+    "limite_integracion_vertical": "Generador no puede tener más del 8% individual ni 40% conjunto del valor de inversión del sistema de transmisión nacional (Ley 20.936/2016 Art. 7°)"
+  },
+  "concentracion_por_zona_2025": [
+    {"zona": "Antofagasta-Atacama (norte grande)", "top1_pct": 35, "top3_pct": 72, "interpretacion": "Enel domina con Engie y CGE completando"},
+    {"zona": "Coquimbo-Valparaíso (norte chico-centro)", "top1_pct": 28, "top3_pct": 65, "interpretacion": "Enel y Colbún lideran"},
+    {"zona": "Metropolitana-Maule (centro)", "top1_pct": 32, "top3_pct": 70, "interpretacion": "Enel con ENGIE y Colbún"},
+    {"zona": "Ñuble-Los Lagos (sur)", "top1_pct": 24, "top3_pct": 58, "interpretacion": "Más desconcentrada, con muchas hidroeléctricas medianas"}
+  ],
+  "interpretacion_competencia": "La desconcentración observada en el HHI agregado oculta diferencias importantes por segmento y por zona. El mercado chileno es formalmente desconcentrado en solar/eólico (HHI <1.000) pero moderadamente concentrado en térmica, hidro y BESS. Las nuevas entradas (PMGD solares, nuevos actores como Mainstream, Sonnedix, Tamakaya) han reducido la concentración, pero la transición tecnológica abre nuevos flancos de concentración en almacenamiento y en servicios complementarios.",
+  "fuentes": [
+    {"id": 1, "medio": "CEN - Informe de Monitoreo de la Competencia 2025", "url": "https://www.coordinador.cl/wp-content/uploads/2026/04/Informe-Monitoreo-2025.pdf"},
+    {"id": 2, "medio": "CEN - Monitoreo 2024", "url": "https://www.coordinador.cl/wp-content/uploads/2025/04/Informe-Monitoreo-2024.pdf"},
+    {"id": 3, "medio": "Slideshare - Monitoreo y Competencia 2025", "url": "https://es.slideshare.net/slideshow/informe-2025-monitoreo-y-competencia-en-el-mercado-electrico-nacional/287030072"},
+    {"id": 4, "medio": "Revista Electricidad - Cuatro generadores concentran 65%", "url": "https://www.revistaei.cl/cuatro-generadores-concentra-el-65-de-la-capacidad-instalada-en-el-sistema-electrico-local/"},
+    {"id": 5, "medio": "BCN - Segmento de transmisión", "url": "https://www.bcn.cl/obtienearchivo?id=repositorio/10221/37302/1/BCN___Revision_del_estado_actual_del_Segmento_de_transmision_electrica.pdf"}
+  ]
+}

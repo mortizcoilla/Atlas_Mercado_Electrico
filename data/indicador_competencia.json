@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "titulo": "Indicador de Competencia del Mercado Eléctrico (ICME)",
+    "definicion": "Score compuesto 0-100 que mide el nivel de competencia efectiva del mercado eléctrico chileno. A mayor valor, mayor competencia. Score alto = mercado desconcentrado y funcional. Score bajo = mercado concentrado o con barreras estructurales.",
+    "metodologia": "Promedio ponderado de 5 sub-indicadores: HHI de capacidad instalada (peso 25%), HHI del segmento BESS (peso 15%), concentración de transmisión (peso 20%), razón PN/CMg (peso 20%), diversidad de actores en el Plan de Expansión (peso 20%).",
+    "rango_interpretacion": {
+      "0-25": "Mercado muy concentrado - alerta regulatoria",
+      "25-50": "Concentración moderada - requiere vigilancia",
+      "50-75": "Competencia razonable - segmento con focos de atención",
+      "75-100": "Mercado desconcentrado - competencia funcional"
+    },
+    "actualizado": "2026-04"
+  },
+  "sub_indicadores": {
+    "hhi_capacidad_instalada": {"peso_pct": 25, "descripcion": "HHI del mercado de generación, considerando todos los actores incluyendo PMGD."},
+    "hhi_bess": {"peso_pct": 15, "descripcion": "HHI del segmento de almacenamiento, que es el cuello de botella futuro."},
+    "concentracion_transmision": {"peso_pct": 20, "descripcion": "HHI del mercado de transmisión troncal (3 firmas principales: Transelec, ISA, CGE)."},
+    "razon_pn_cmg": {"peso_pct": 20, "descripcion": "Razón Precio de Nudo / Costo Marginal. Si el ratio es alto, hay margen para mayor competencia o eficiencia regulatoria."},
+    "diversidad_plan_expansion": {"peso_pct": 20, "descripcion": "Número de actores distintos participando en el Plan de Expansión de Transmisión. Mayor diversidad = menor captura regulatoria."}
+  },
+  "serie_historica": [
+    {"año": 2015, "score": 42, "sub_scores": {"hhi_gen": 22, "hhi_bess": null, "conc_trans": 8, "razon_pn_cmg": 50, "diversidad_pe": 75}, "interpretacion": "Mercado moderadamente concentrado. Hidrología favorable, PN en nivel medio. BESS aún inexistente (no se mide)."},
+    {"año": 2016, "score": 43, "sub_scores": {"hhi_gen": 24, "hhi_bess": null, "conc_trans": 8, "razon_pn_cmg": 50, "diversidad_pe": 75}, "interpretacion": ""},
+    {"año": 2017, "score": 48, "sub_scores": {"hhi_gen": 32, "hhi_bess": null, "conc_trans": 9, "razon_pn_cmg": 50, "diversidad_pe": 75}, "interpretacion": "Caída de HHI por entrada solar"},
+    {"año": 2018, "score": 51, "sub_scores": {"hhi_gen": 40, "hhi_bess": null, "conc_trans": 9, "razon_pn_cmg": 50, "diversidad_pe": 80}, "interpretacion": ""},
+    {"año": 2019, "score": 55, "sub_scores": {"hhi_gen": 48, "hhi_bess": null, "conc_trans": 10, "razon_pn_cmg": 50, "diversidad_pe": 80}, "interpretacion": "Desconcentración se consolida"},
+    {"año": 2020, "score": 60, "sub_scores": {"hhi_gen": 55, "hhi_bess": null, "conc_trans": 10, "razon_pn_cmg": 50, "diversidad_pe": 80}, "interpretacion": "Diversificación de actores en Plan de Expansión"},
+    {"año": 2021, "score": 65, "sub_scores": {"hhi_gen": 60, "hhi_bess": 70, "conc_trans": 10, "razon_pn_cmg": 50, "diversidad_pe": 85}, "interpretacion": "BESS aparece, mercado desconcentrado en generación"},
+    {"año": 2022, "score": 70, "sub_scores": {"hhi_gen": 70, "hhi_bess": 60, "conc_trans": 12, "razon_pn_cmg": 50, "diversidad_pe": 85}, "interpretacion": "Caída HHI solar"},
+    {"año": 2023, "score": 78, "sub_scores": {"hhi_gen": 80, "hhi_bess": 50, "conc_trans": 12, "razon_pn_cmg": 50, "diversidad_pe": 85}, "interpretacion": "Pico histórico de competencia efectiva"},
+    {"año": 2024, "score": 75, "sub_scores": {"hhi_gen": 82, "hhi_bess": 35, "conc_trans": 12, "razon_pn_cmg": 40, "diversidad_pe": 85}, "interpretacion": "Leve caída por concentración BESS"},
+    {"año": 2025, "score": 68, "sub_scores": {"hhi_gen": 78, "hhi_bess": 25, "conc_trans": 12, "razon_pn_cmg": 30, "diversidad_pe": 78}, "interpretacion": "BESS se consolida como cuello de botella. Razón PN/CMg cae por mayor CMg. Rige el alerta preventiva."}
+  ],
+  "interpretacion_estructural": "El ICME muestra que la competencia del mercado eléctrico chileno mejoró sostenidamente entre 2015 y 2023 (42 → 78), principalmente por la desconcentración de la generación con la entrada masiva de ERNC. Sin embargo, el puntaje cayó en 2024-2025 (75 → 68) por dos factores: (a) la concentración del segmento BESS, que es el nuevo cuello de botella, y (b) el alza del CMg por menor hidrología. La alerta regulatoria está principalmente en el segmento de almacenamiento, no en generación.",
+  "componentes_2025_detalle": {
+    "hhi_capacidad_instalada": {"valor": 1180, "subscore": 78, "interpretacion": "Mercado desconcentrado en generación. Top 4 con 50,5% de la capacidad."},
+    "hhi_bess": {"valor": 1980, "subscore": 25, "interpretacion": "Engie + AES Andes = 45,5% del BESS. Riesgo de concentración en almacenamiento."},
+    "concentracion_transmision": {"valor": 2450, "subscore": 12, "interpretacion": "Top 3 (Transelec, ISA, CGE) = 78% del VATT. Oligopolio natural."},
+    "razon_pn_cmg": {"valor": 1.17, "subscore": 30, "interpretacion": "PN 17% sobre CMg 2025, ratio más bajo en 5 años. Indica que el precio regulado está más cerca del costo marginal."},
+    "diversidad_plan_expansion": {"valor": 78, "subscore": 78, "interpretacion": "Plan 2023-2024 incluye 91 obras con participación de 8+ empresas transmisoras distintas."}
+  },
+  "lectura_recomendada": "El ICME es una herramienta de seguimiento. La transición tecnológica en Chile (de térmica a ERNC) redujo la concentración de generación, pero abrió nuevos flancos: almacenamiento, transmisión. La política regulatoria debería enfocarse en mantener la desconcentración de generación y vigilar la concentración incipiente de BESS.",
+  "fuentes": [
+    {"id": 1, "medio": "CEN - Informe de Monitoreo 2025", "url": "https://www.coordinador.cl/wp-content/uploads/2026/04/Informe-Monitoreo-2025.pdf"},
+    {"id": 2, "medio": "data/capacidad_instalada.json", "url": "internal"},
+    {"id": 3, "medio": "data/concentracion_mercado.json", "url": "internal"},
+    {"id": 4, "medio": "data/ingreso_tarifario_vatt.json", "url": "internal"},
+    {"id": 5, "medio": "data/precio_nudo_promedio.json", "url": "internal"}
+  ]
+}

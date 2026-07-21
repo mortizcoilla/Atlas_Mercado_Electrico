@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "titulo": "Precio de Nudo y Precio Medio de Mercado — Cliente regulado",
+    "fuente_principal": "Comisión Nacional de Energía (CNE) - Informes de Fijación de Precios de Nudo",
+    "definicion": "El Precio de Nudo (PN) es el precio regulado que las distribuidoras cobran a clientes finales cuya potencia conectada es ≤ 500 kW. Se fija semestralmente por la CNE en abril y octubre de cada año. Tiene dos componentes: Precio de la Energía (PE) y Precio de la Potencia (PP).",
+    "esquema_cliente": {
+      "libre_potencia_conectada_kw": "≥ 5.000 kW (originalmente), ampliado a ≥ 500 kW en 2024 y a ≥ 300 kW en 2024-2025",
+      "regulable_umbral_kw": "≤ 500 kW con opción de ser libre si > 500 kW",
+      "regimen_hibrido_kw": "500-5.000 kW (opcional)",
+      "compromiso_años": "Compromiso mínimo de 4 años como cliente libre una vez opta por este régimen"
+    },
+    "actualizado": "2025-12"
+  },
+  "precio_nudo_promedio_anual_usd_mwh": [
+    {"año": 2015, "energia_pe": 75, "potencia_pp": 12, "pn_total": 87, "interpretacion": "Era pre-régimen, gas dominaba"},
+    {"año": 2016, "energia_pe": 70, "potencia_pp": 12, "pn_total": 82, "interpretacion": ""},
+    {"año": 2017, "energia_pe": 65, "potencia_pp": 11, "pn_total": 76, "interpretacion": ""},
+    {"año": 2018, "energia_pe": 70, "potencia_pp": 11, "pn_total": 81, "interpretacion": "Verano seco"},
+    {"año": 2019, "energia_pe": 68, "potencia_pp": 11, "pn_total": 79, "interpretacion": ""},
+    {"año": 2020, "energia_pe": 60, "potencia_pp": 11, "pn_total": 71, "interpretacion": "Pandemia"},
+    {"año": 2021, "energia_pe": 95, "potencia_pp": 12, "pn_total": 107, "interpretacion": "Peak megasequía, gas caro"},
+    {"año": 2022, "energia_pe": 78, "potencia_pp": 11, "pn_total": 89, "interpretacion": "Recuperación"},
+    {"año": 2023, "energia_pe": 60, "potencia_pp": 11, "pn_total": 71, "interpretacion": "El Niño"},
+    {"año": 2024, "energia_pe": 55, "potencia_pp": 11, "pn_total": 66, "interpretacion": "Más ERNC, menor precio"},
+    {"año": 2025, "energia_pe": 70, "potencia_pp": 12, "pn_total": 82, "interpretacion": "Hidro cae 25%, térmico compensa"}
+  ],
+  "precio_nudo_cliente_final": {
+    "definicion": "Precio final que paga el cliente regulado incluye: PN + peaje de distribución + IVA",
+    "componentes": [
+      {"componente": "Precio de Nudo (PN)", "peso_pct": 60, "interpretacion": "Energía + potencia"},
+      {"componente": "Cargo de distribución", "peso_pct": 35, "interpretacion": "Red de la distribuidora local"},
+      {"componente": "Peaje de transmisión troncal", "peso_pct": 5, "interpretacion": "VATT prorrateado"}
+    ],
+    "precio_promedio_cliente_regulado_2024_usd_mwh": 105,
+    "precio_promedio_cliente_regulado_2025_usd_mwh": 120,
+    "interpretacion": "El alza del 14% en el precio regulado entre 2024 y 2025 refleja la estrechez hidrológica, no una decisión regulatoria discrecional."
+  },
+  "comparativa_clientes": {
+    "cliente_regulado_pago_promedio_2025_usd_mwh": 120,
+    "cliente_libre_pago_promedio_2025_usd_mwh": 80,
+    "interpretacion": "Los clientes libres pagan en promedio 30% menos que los regulados, porque pueden negociar contratos directamente con generadores. Esta brecha justifica el interés por ampliar el umbral de libertad (RE 58/2024).",
+    "composicion_cliente_libre": "Gran industria minera (51% del consumo libre), industriales manufactureros (28%), retail y servicios (12%), otros (9%)"
+  },
+  "reforma_regulatoria_clientes_2024_2025": {
+    "re_58_dic_2024": "Reduce el umbral de potencia para ser cliente libre de 500 kW a 300 kW. Esta ampliación es progresiva.",
+    "re_13_feb_2025": "Reglamenta el período de transición y el mecanismo de cambio de régimen.",
+    "efecto_esperado": "Más usuarios podrían acceder al mercado libre, lo que aumenta la competencia en generación. Críticos argumentan que puede dejar a los clientes regulados con la peor parte de la curva de carga (peor perfil de consumo).",
+    "estado_2026": "Implementación en curso. Número efectivo de nuevos clientes libres aún limitado por las barreras de entrada (información, contratos, garantías)."
+  },
+  "interpretacion_estructural": "El Precio de Nudo es el termómetro regulatorio del mercado. Refleja el costo marginal esperado en el corto plazo más un componente de capacidad. La rebaja del umbral para clientes libres (de 500 a 300 kW) es un cambio regulatorio significativo que profundiza la liberalización, pero su impacto efectivo depende de las barreras de entrada para nuevos clientes.",
+  "relacion_pn_cmg": {
+    "ratio_pn_cmg_2024": 1.74,
+    "ratio_pn_cmg_2025": 1.17,
+    "interpretacion": "El PN siempre es mayor que el CMg promedio porque: (a) incluye costo de capacidad, (b) se calcula sobre el peor escenario hidrológico esperado, (c) incorpora la anualidad del VATT. En 2024, con hidro abundante, el ratio fue 1,74 (PN casi 75% sobre el CMg). En 2025, con hidro escasa, el ratio bajó a 1,17."
+  },
+  "fuentes": [
+    {"id": 1, "medio": "CNE - Fijación de Precios de Nudo", "url": "https://www.cne.cl/es/tarificacion/electrica/precio-nudo/"},
+    {"id": 2, "medio": "CNE - Resolución Exenta 58 de 2024", "url": "https://www.cne.cl/"},
+    {"id": 3, "medio": "Consejo Minero - Análisis del Precio Estabilizado PMGD/PMG", "url": "https://consejominero.cl/wp-content/uploads/2025/12/20250707-energiE-PPU_Analisis-del-Precio-Estabilizado-de-los-PMGD-y-PMG_Informe-Definitivo-2.pdf"},
+    {"id": 4, "medio": "CNE - Reporte Energético Financiero", "url": "https://www.cne.cl/wp-content/uploads/2025/07/RT_Financiero_v20252T.pdf"},
+    {"id": 5, "medio": "Energía Abierta - Precio Nudo", "url": "http://energiaabierta.cl/categorias-estadistica/electricidad"}
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "titulo": "Plan de Expansión Anual de la Transmisión 2017-2025",
+    "fuente_principal": "Comisión Nacional de Energía (CNE) + Ministerio de Energía + Diario Oficial",
+    "definicion": "Proceso regulado por LGSE Arts. 87° y 91°. Cada año el CEN presenta una propuesta, la CNE aprueba el Informe Técnico Definitivo, el Ministerio dicta Decreto Exento fijando las obras nuevas, y se inicia el proceso de licitación para construcción.",
+    "actualizado": "2026-04"
+  },
+  "marco_normativo": {
+    "ley_principal": "LGSE Art. 87° y 91° (DFL 4/20018)",
+    "reforma_transmision": "Ley 20.936/2016 - fortalece planificación y remuneración",
+    "transicion_energetica": "Ley 21.721/2024 - ajustes adicionales",
+    "reglamento_coordinacion": "DS 125/2017",
+    "entes": {
+      "planificador_propuesta": "Coordinador Eléctrico Nacional (CEN)",
+      "regulador_aprobacion": "Comisión Nacional de Energía (CNE)",
+      "ente_politico": "Ministerio de Energía",
+      "ente_licitador": "Coordinador Eléctrico Nacional (CEN)",
+      "fiscalizador": "Superintendencia de Electricidad y Combustibles (SEC)",
+      "resolucion_discrepancias": "Panel de Expertos"
+    }
+  },
+  "segmentos_transmision": [
+    {"segmento": "Nacional", "definicion": "Sistema troncal de alta tensión (220 kV y 500 kV) que conecta las principales fuentes de generación con los centros de consumo. Instalaciones de uso común remuneradas vía VATT."},
+    {"segmento": "Zonal", "definicion": "Sistemas de tensión menor (generalmente 66 kV a 220 kV) que abastecen zonas específicas. Cada sistema zonal se identifica con una letra (A, B, C, D, E, F)."},
+    {"segmento": "Polos de desarrollo", "definicion": "Infraestructura para evacuación de generación en zonas de alto potencial renovable, declarada mediante Decreto Exento del Ministerio de Energía."},
+    {"segmento": "Dedicada", "definicion": "Infraestructura para uso exclusivo de un usuario (generador o consumidor) sin acceso abierto a terceros. Remunerada por el usuario."}
+  ],
+  "planes_de_expansion_emitidos": [
+    {
+      "plan_año": 2017,
+      "decreto": "D.S. 418/2017 (Ministerio de Energía)",
+      "inversion_referencial_musd": 1100,
+      "numero_obras": 30,
+      "estado_actual_2026": "En operación, parcialmente terminado. Algunas obras todavía en construcción. Atrasos significativos en varias."
+    },
+    {
+      "plan_año": 2018,
+      "decreto": "D.S. 231/2019",
+      "inversion_referencial_musd": 700,
+      "numero_obras": 22,
+      "estado_actual_2026": "En operación la mayoría. Atrasos moderados."
+    },
+    {
+      "plan_año": 2019,
+      "decreto": "D.S. 171/2020",
+      "inversion_referencial_musd": 540,
+      "numero_obras": 23,
+      "estado_actual_2026": "Operación parcial. Algunas obras con atrasos de 2-3 años."
+    },
+    {
+      "plan_año": 2020,
+      "decreto": "D.S. 257/2021",
+      "inversion_referencial_musd": 250,
+      "numero_obras": 16,
+      "estado_actual_2026": "Operación mayoritaria."
+    },
+    {
+      "plan_año": 2021,
+      "decreto": "D.S. 200/2022",
+      "inversion_referencial_musd": 320,
+      "numero_obras": 18,
+      "estado_actual_2026": "Operación parcial. Atrasos en obras grandes."
+    },
+    {
+      "plan_año": 2022,
+      "decreto": "D.E. 4/2024 (9 de enero de 2024, publicado 22 de enero)",
+      "inversion_referencial_musd": 200,
+      "numero_obras": 16,
+      "estado_actual_2026": "Licitación y construcción en curso."
+    },
+    {
+      "plan_año": 2023,
+      "decreto": "D.E. 266/2024 (5 de diciembre de 2024)",
+      "inversion_referencial_musd": 389,
+      "numero_obras": 45,
+      "detalle": "10 obras nacionales (US$52M, 9 ampliaciones + 1 nueva) y 35 obras zonales (US$337M, 22 ampliaciones + 13 nuevas)",
+      "destacado": "Nuevo sistema de control de flujo FACTS en Ciruelos-Nueva Pichirropulli 220 kV. Reestructuración del sistema de Antofagasta.",
+      "estado_actual_2026": "Licitación en curso. Construcción estimada desde primer semestre 2026."
+    },
+    {
+      "plan_año": 2024,
+      "decreto": "D.E. 354/2025 (12 de enero de 2026, Diario Oficial)",
+      "inversion_referencial_musd": 580,
+      "numero_obras": 23,
+      "detalle": "6 obras nacionales (incluye Nueva Línea 2×500 kV Nueva Chuquicamata-Miraje US$90M, Sistema Tiquel-Tiuquilemu 500 kV US$190M) y 17 obras zonales",
+      "destacado": "Nueva línea 500 kV Chuquicamata-Miraje (norte grande). Sistema Tiquel-Tiuquilemu para robustecer centro-sur.",
+      "estado_actual_2026": "Inicio de procesos de licitación."
+    },
+    {
+      "plan_año": 2025,
+      "decreto": "Pendiente publicación (ITD en proceso)",
+      "inversion_referencial_musd": 1100,
+      "numero_obras": 91,
+      "detalle": "13 proyectos nacionales (VI referencial US$501M) y 78 proyectos zonales (VI referencial US$503M)",
+      "estado_actual_2026": "En proceso de definición técnica final (ITP 2024). Publicación del decreto esperada para 2026."
+    }
+  ],
+  "caso_emblematico_chuquicamata_miraje": {
+    "descripcion": "Nueva línea 2×500 kV entre subestaciones Nueva Chuquicamata y Miraje, energizada en 220 kV. Inversión referencial US$90 millones. Plazo constructivo 60-72 meses.",
+    "objetivo_tecnico": "Permitir evacuación de generación solar del norte grande sin saturar el corredor 500 kV existente. Reducir vertimiento de Antofagasta.",
+    "vinculo_25F": "Este corredor es crítico para evitar la dependencia del único enlace 500 kV que falló el 25 de febrero de 2025. Es redundancia geográfica.",
+    "estado_2026": "En proceso de licitación (Plan de Expansión 2024, D.E. 354/2025)."
+  },
+  "caso_tiquel_tiuquilemu": {
+    "descripcion": "Sistema de subestaciones y líneas 500 kV entre Tiquel y Tiuquilemu, en la zona centro-sur.",
+    "inversion_total": "US$190 millones (conjunto)",
+    "componentes": [
+      "Nueva S/E Tiquel (US$125M)",
+      "Nueva línea 2×500 kV Tiquel-Tiquilemu (US$24,6M)",
+      "Nueva línea Tiquel-Las Delicias 220 kV (US$41,3M)",
+      "Subestaciones Tiuquilemu, La Calle, Cambrales"
+    ],
+    "objetivo_tecnico": "Aumentar la capacidad de transferencia desde los polos de inyección renovable del centro-sur al centro de carga. Habilitar nuevos polos de inyección."
+  },
+  "ingreso_tarifario_vatt_promedio": {
+    "empresa_receptora_principal": "ISA Interchile (filial de ISA, Colombia)",
+    "vatt_promedio_anual_musd": 350,
+    "vatt_total_sistema_musd": 950,
+    "interpretacion": "El VATT (Valor Agregado de Transmisión Troncal) es la remuneración que reciben los propietarios de líneas de transmisión por hacer disponibles sus instalaciones al sistema. ISA Interchile, Transelec y CGE son los principales receptores."
+  },
+  "interpretacion_estructural": "El Plan de Expansión de Transmisión tiene un patrón: (a) atrasos sistemáticos entre decreto y puesta en servicio, (b) crecimiento del monto total por plan (US$1.100M en 2017, US$1.100M en 2025), (c) obras más grandes cada año (los corredores 500 kV de los últimos años no existían antes), (d) la redundancia del corredor norte-centro está en construcción pero no operativa. El apagón del 25-F aceleró la urgencia política de las obras, pero la construcción toma 5-7 años.",
+  "fuentes": [
+    {"id": 1, "medio": "CNE - Plan de Expansión 2023", "url": "https://www.cne.cl/es/tarificacion/electrica/expansion-de-transmision/ano-2023/"},
+    {"id": 2, "medio": "CNE - Plan de Expansión 2025", "url": "https://www.cne.cl/es/tarificacion/electrica/expansion-de-transmision/proceso-2025/"},
+    {"id": 3, "medio": "Electrominería - Decreto 354 fija 23 obras nuevas", "url": "https://electromineria.cl/ministerio-energia-fija-23-obras-nuevas-transmision-nacional-zonal-plan-expansion-2024/"},
+    {"id": 4, "medio": "CNE - ITP Plan de Expansión 2023", "url": "https://www.cne.cl/wp-content/uploads/2024/02/ITP-Plan-de-Expansion-de-la-Transmision-2023.pdf"},
+    {"id": 5, "medio": "CNE - Resolución 562/2024 Plan 2023", "url": "https://www.cne.cl/prensa/prensa-2024/4-octubre-2024/cne-plan-de-expansion-de-la-transmision-2023-contempla-45-obras-con-una-inversion-total-de-us389-millones/"},
+    {"id": 6, "medio": "JDF - Decreto 354 publicado", "url": "https://jdf.cl/nuevas-obras-de-transmision-plan-de-expansion-2024/"},
+    {"id": 7, "medio": "BCN - Decreto 4 exento 2024", "url": "https://www.bcn.cl/obtienearchivo?id=repositorio/10221/37302/1/BCN___Revision_del_estado_actual_del_Segmento_de_transmision_electrica.pdf"},
+    {"id": 8, "medio": "CNE - Propuesta Expansión 2024 (PET)", "url": "https://www.cne.cl/wp-content/uploads/2024/01/Informe-PET-2024-Version-23012024.pdf"}
+  ]
+}

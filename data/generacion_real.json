@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "titulo": "Generación real del SEN por tecnología y zona",
+    "fuente_principal": "Coordinador Eléctrico Nacional (CEN) - Reportes Mensuales y Anuales",
+    "cobertura": "Sistema Eléctrico Nacional, 2010-2025",
+    "actualizado": "2026-04"
+  },
+  "generacion_anual_gwh_evolucion": [
+    {"año": 2010, "total": 60500, "termica": 40700, "hidrica": 18500, "solar": 0, "eolica": 200, "ernc": 1100, "ernc_pct": 1.8},
+    {"año": 2012, "total": 64800, "termica": 43800, "hidrica": 18100, "solar": 250, "eolica": 450, "ernc": 2200, "ernc_pct": 3.4},
+    {"año": 2014, "total": 66100, "termica": 44600, "hidrica": 17500, "solar": 800, "eolica": 1000, "ernc": 4000, "ernc_pct": 6.0},
+    {"año": 2016, "total": 68500, "termica": 40800, "hidrica": 18500, "solar": 2300, "eolica": 1500, "ernc": 8200, "ernc_pct": 12.0},
+    {"año": 2018, "total": 71000, "termica": 38500, "hidrica": 19500, "solar": 4400, "eolica": 2200, "ernc": 13000, "ernc_pct": 18.3},
+    {"año": 2020, "total": 75200, "termica": 36500, "hidrica": 18800, "solar": 7800, "eolica": 3000, "ernc": 20000, "ernc_pct": 26.6},
+    {"año": 2022, "total": 82100, "termica": 35500, "hidrica": 21000, "solar": 12500, "eolica": 4900, "ernc": 25600, "ernc_pct": 31.2},
+    {"año": 2023, "total": 83637, "termica": 30100, "hidrica": 22500, "solar": 17600, "eolica": 10300, "ernc": 31059, "ernc_pct": 37.1},
+    {"año": 2024, "total": 85519, "termica": 29000, "hidrica": 22000, "solar": 18612, "eolica": 11083, "ernc": 34525, "ernc_pct": 40.4},
+    {"año": 2025, "total": 85064, "termica": 30600, "hidrica": 20600, "solar": 22636, "eolica": 13088, "ernc": 37462, "ernc_pct": 44.0}
+  ],
+  "generacion_2024_detalle": {
+    "total_gwh": 85519,
+    "crecimiento_pct_vs_2023": 2.2,
+    "por_tecnologia_gwh": [
+      {"tecnologia": "Solar", "gwh": 18612.9, "pct": 21.8, "tendencia": "+9.0% vs 2023"},
+      {"tecnologia": "Eólica", "gwh": 11083.0, "pct": 13.0, "tendencia": "+7.6% vs 2023"},
+      {"tecnologia": "Hidroeléctrica", "gwh": 22000, "pct": 25.7, "tendencia": "estable"},
+      {"tecnologia": "Térmica total", "gwh": 29000, "pct": 33.9, "tendencia": "-3.6% vs 2023"},
+      {"tecnologia": "Biomasa y otras ERNC", "gwh": 4800, "pct": 5.6, "tendencia": "estable"}
+    ]
+  },
+  "generacion_2025_detalle": {
+    "total_gwh": 85064,
+    "crecimiento_pct_vs_2024": -0.5,
+    "interpretacion": "Primer año de leve caída en la generación total del SEN por menor hidrología (-25% en hidro). Aumento del despacho térmico +12% para compensar.",
+    "por_tecnologia_gwh": [
+      {"tecnologia": "Solar", "gwh": 22636, "pct": 26.6, "crecimiento_yoy": "+21.6%"},
+      {"tecnologia": "Hidroeléctrica", "gwh": 20600, "pct": 24.2, "crecimiento_yoy": "-6.4%"},
+      {"tecnologia": "Eólica", "gwh": 13088, "pct": 15.4, "crecimiento_yoy": "+18.1%"},
+      {"tecnologia": "Térmica total", "gwh": 30600, "pct": 36.0, "crecimiento_yoy": "+5.5%"}
+    ]
+  },
+  "generacion_por_zona_2024": {
+    "norte_arica_coquimbo_pct": 39.2,
+    "centro_valparaiso_maule_pct": 36.1,
+    "sur_nuble_lagos_pct": 24.7,
+    "interpretacion": "El norte concentra el grueso de la generación solar y eólica, el centro la hidroeléctrica de embalse y térmica, el sur la hidro pasada y eólica. Esta distribución explica la congestión del corredor 500 kV norte-centro."
+  },
+  "operacion_sen_2024": {
+    "costo_total_operacion_musd": 1670,
+    "variacion_vs_2023_pct": -39.1,
+    "interpretacion": "El menor costo de operación se explica por mayor disponibilidad hidro y mayor participación solar/eólica con costo variable cercano a cero."
+  },
+  "fuentes": [
+    {"id": 1, "medio": "CEN - Reporte Anual Desempeño 2024 (Art. 72-15)", "url": "https://www.coordinador.cl/wp-content/uploads/2025/04/CEN-Reporte-Art-72-15-ano-2024.pdf"},
+    {"id": 2, "medio": "CEN - Balance SEN 2025", "url": "https://www.coordinador.cl/wp-content/uploads/2026/03/2025-12-29-CONFERENCIA-DE-PRENSA.pdf"},
+    {"id": 3, "medio": "Ministerio de Energía - Reporte de Mercados Eléctricos", "url": "https://www.cne.cl/wp-content/uploads/2025/07/RT_Financiero_v20252T.pdf"},
+    {"id": 4, "medio": "CEN - Reporte Energético SEN", "url": "https://www.coordinador.cl/wp-content/uploads/2025/01/CEN_Reporte_Energetico_SEN_Ene25.pdf"}
+  ]
+}

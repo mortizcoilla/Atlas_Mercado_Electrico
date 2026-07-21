@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "titulo": "Posiciones sobre el mercado eléctrico — Panoramas por sector institucional",
+    "definicion": "Cada panorama documenta la posición oficial documentada de un sector institucional sobre temas clave del mercado eléctrico y la transmisión. Las posiciones se contrastan con datos públicos primarios del mercado. NO son declaraciones individuales sino posturas institucionales agregadas.",
+    "temas_cubiertos": [
+      "Plan de Expansión de Transmisión y su ejecución",
+      "Integración vertical generación-transmisión",
+      "Umbral de clientes libres",
+      "Tarifa regulada vs libre",
+      "Hidroelectricidad y almacenamiento",
+      "Competencia y concentración de mercado"
+    ],
+    "metodologia": "Las posiciones se construyen a partir de documentos oficiales: oficios del Ministerio de Energía al Congreso, presentaciones de la CNE, reportes del CEN, fallos del TDLC, papers de la academia, comunicados de gremios (Generadoras de Chile, ACERA, GIE). No son declaraciones puntuales de un personaje, sino posturas agregadas de una institución o sector.",
+    "actualizado": "2026-04"
+  },
+  "sectores_institucionales": [
+    {
+      "id": "ministerio_energia",
+      "nombre": "Ministerio de Energía",
+      "rol": "Ente rector de política energética. Define lineamientos estratégicos, dicta Decretos de Expansión, fija RE tarifarias."
+    },
+    {
+      "id": "cne",
+      "nombre": "Comisión Nacional de Energía (CNE)",
+      "rol": "Regulador técnico-económico. Aprueba Planes de Expansión. Fija Precios de Nudo y tarifas de distribución. Emite resoluciones de operación."
+    },
+    {
+      "id": "cen",
+      "nombre": "Coordinador Eléctrico Nacional (CEN)",
+      "rol": "Operador independiente del sistema. Monitorea competencia. Coordina despacho. Propone expansión anual."
+    },
+    {
+      "id": "sec",
+      "nombre": "Superintendencia de Electricidad y Combustibles (SEC)",
+      "rol": "Fiscalizador. Calidad de servicio. Seguridad de instalaciones. Sanciona incumplimientos."
+    },
+    {
+      "id": "panel_expertos",
+      "nombre": "Panel de Expertos",
+      "rol": "Resuelve discrepancias técnicas entre agentes y regulador. Dictamina sobre materias específicas definidas en la LGSE."
+    },
+    {
+      "id": "tdlc",
+      "nombre": "Tribunal de Defensa de la Libre Competencia (TDLC)",
+      "rol": "Resuelve sobre libre competencia. Aplica multas. Aprueba o rechaza operaciones de concentración empresarial."
+    },
+    {
+      "id": "academia_usm",
+      "nombre": "Academia — Universidad Técnica Federico Santa María (USM)",
+      "rol": "Aporta investigación técnica sobre el sistema. Centro de energía USM. Publica estudios sobre estabilidad, confiabilidad, costo de falla."
+    },
+    {
+      "id": "academia_uch",
+      "nombre": "Academia — Universidad de Chile (Departamento de Ingeniería Eléctrica)",
+      "rol": "Investigación en sistemas eléctricos, mercados y regulación. AC3E como centro asociado. Análisis post-apagón 25-F."
+    },
+    {
+      "id": "generadoras_chile",
+      "nombre": "Generadoras de Chile (gremio)",
+      "rol": "Gremio de generadoras (Enel, AES, Engie, Colbún, EDF, etc.). Boletín mensual con datos del sistema."
+    },
+    {
+      "id": "acera",
+      "nombre": "ACERA (Asociación Chilena de Energías Renovables y Almacenamiento)",
+      "rol": "Gremio de ERNC. Balance anual del sistema. Crítica a la transmisión como cuello de botella."
+    },
+    {
+      "id": "fne",
+      "nombre": "Fiscalía Nacional Económica (FNE)",
+      "rol": "Persigue prácticas anticompetitivas. Estudia concentración de mercado. Puede llevar casos al TDLC."
+    },
+    {
+      "id": "opoficialismo",
+      "nombre": "Oposición parlamentaria",
+      "rol": "Bloque FA-PC-PS. Posiciones sobre mercado eléctrico, transmisión y tarifas desde el Congreso."
+    },
+    {
+      "id": "oficialismo",
+      "nombre": "Oficialismo de gobierno (Kast 2026-presente)",
+      "rol": "Posición del gobierno actual sobre mercado y transmisión."
+    }
+  ],
+  "posiciones_por_tema": [
+    {
+      "tema": "Plan de Expansión de Transmisión — ejecución",
+      "posiciones": [
+        {"sector": "ministerio_energia", "posicion": "Cada plan de expansión se ejecuta con la celeridad que permite el proceso regulatorio. Los decretos se dictan en los plazos legales y se licitan vía CEN.", "fuente": "Decretos 4/2024, 266/2024, 354/2025"},
+        {"sector": "cne", "posicion": "La CNE aprueba Informes Técnicos Definitivos con criterios técnicos y consulta ciudadana. Los atrasos son por complejidad técnica, no por demora regulatoria.", "fuente": "Resoluciones Exentas 562/2024 y 239/2024"},
+        {"sector": "cen", "posicion": "El CEN ejecuta las licitaciones. Reporta que los plazos constructivos de las obras son los acordados. Atrasos se reportan en los reportes mensuales.", "fuente": "CEN Reporte Mensual y Balance 2025"},
+        {"sector": "academia_usm", "posicion": "Hay un desfase estructural entre la velocidad de instalación de renovables (5 años) y la velocidad de construcción de transmisión (10-15 años). El Plan de Expansión es necesario pero insuficiente.", "fuente": "Estudios AC3E-USM sobre estabilidad y costo de falla"},
+        {"sector": "acera", "posicion": "El 70% de las obras de transmisión en desarrollo presenta atrasos, con 1,7 años de retraso promedio. El sistema ha pasado del 100% de capacidad del corredor 500 kV en varios momentos del año.", "fuente": "ACERA Balance 2025"},
+        {"sector": "generadoras_chile", "posicion": "El Plan de Expansión debe acelerarse. La conexión de nuevos proyectos renovables depende de obras de transmisión que llevan años de atraso. Pedimos más urgencia al CEN y al Ministerio.", "fuente": "Boletín mensual Generadoras de Chile"},
+        {"sector": "opoficialismo", "posicion": "La lentitud de la ejecución del Plan de Expansión es responsabilidad de la empresa transmisora privada. Plantean que la transmisión debería ser estatal para garantizar ejecución.", "fuente": "Discursos FA-PS-PC 2022-2025"}
+      ]
+    },
+    {
+      "tema": "Integración vertical generación-transmisión",
+      "posiciones": [
+        {"sector": "tdlc", "posicion": "Vigilancia permanente sobre concentraciones y conductas estratégicas. La integración vertical puede crear incentivos a obstaculizar acceso a redes por parte de competidores.", "fuente": "Jurisprudencia TDLC sobre sector eléctrico"},
+        {"sector": "cne", "posicion": "Los límites legales (8% individual, 40% conjunto) son suficientes para evitar integración excesiva. Monitoreo del CEN verifica cumplimiento.", "fuente": "LGSE Art. 7° (Ley 20.936/2016)"},
+        {"sector": "academia_uch", "posicion": "Los límites son razonables pero la concentración efectiva del mercado (HHI por segmento) muestra riesgos distintos. El BESS, que será el cuello de botella futuro, está moderadamente concentrado.", "fuente": "Estudio post-25-F, AC3E, 2025"},
+        {"sector": "generadoras_chile", "posicion": "Las reglas actuales permiten un mercado funcional. Cambios en los límites afectarían inversiones ya realizadas.", "fuente": "Comunicado Generadoras Chile 2024"}
+      ]
+    },
+    {
+      "tema": "Umbral de clientes libres",
+      "posiciones": [
+        {"sector": "ministerio_energia", "posicion": "La rebaja del umbral de 500 kW a 300 kW (RE 58/2024) amplía la libertad de elección. El gobierno anterior justificó la medida como profundización de la liberalización del mercado.", "fuente": "Resolución Exenta 58/2024 del Ministerio de Energía"},
+        {"sector": "cne", "posicion": "La ampliación es consistente con el modelo de libre mercado. Usuarios con potencia ≥ 300 kW tienen capacidad negociadora.", "fuente": "Resolución Exenta 13/2025"},
+        {"sector": "academia_uch", "posicion": "La ampliación es razonable en teoría, pero el impacto efectivo depende de las barreras de entrada (información, garantías contractuales, riesgos de precio). Sin facilitación, la ampliación puede no traducirse en más competencia real.", "fuente": "Estudios sobre contratos bilaterales en Chile"},
+        {"sector": "fne", "posicion": "La libre competencia debe asegurarse con fiscalización activa, no solo con ampliación de umbrales. Los clientes libres son vigilados.", "fuente": "Informes FNE sobre mercado eléctrico 2020-2024"},
+        {"sector": "opoficialismo", "posicion": "La ampliación es positiva pero debe ir acompañada de mayor regulación de los contratos bilaterales y transparencia de precios.", "fuente": "Discursos en Sala y mociones parlamentarias 2024-2025"},
+        {"sector": "oficialismo", "posicion": "Apoya la ampliación como profundización del mercado. Busca avanzar a más competencia y menor precio final.", "fuente": "Programa de gobierno Kast 2026"}
+      ]
+    },
+    {
+      "tema": "Hidroelectricidad y almacenamiento",
+      "posiciones": [
+        {"sector": "ministerio_energia", "posicion": "El Plan de Descarbonización contempla el cierre progresivo de centrales a carbón, pero reconoce el rol de la hidroeléctrica y el almacenamiento como complemento a las ERNC.", "fuente": "Plan de Descarbonización 2025"},
+        {"sector": "academia_uch", "posicion": "La hidroelectricidad de embalse cumple un rol sistémico (inercia, reserva rodante, almacenamiento estacional) que las ERNC no reemplazan. BESS complementa, no sustituye.", "fuente": "Estudio post-25-F, AC3E, 2025"},
+        {"sector": "acera", "posicion": "El sistema necesita expansión simultánea de transmisión, almacenamiento y capacidad de respaldo. Chile tiene sobrecapacidad solar pero falta dónde almacenarla.", "fuente": "ACERA Balance 2025"},
+        {"sector": "generadoras_chile", "posicion": "Defiende el parque térmico como respaldo. Critica la velocidad de cierre de centrales a carbón sin reemplazo hidroeléctrico equivalente.", "fuente": "Boletín mensual"},
+        {"sector": "opoficialismo", "posicion": "Históricamente crítico con grandes proyectos hidroeléctricos (caso Ralco, Alto Maipo). Ha apoyado el almacenamiento distribuido como alternativa.", "fuente": "Posiciones programáticas FA-PC 2022-2025"}
+      ]
+    },
+    {
+      "tema": "Concentración y competencia",
+      "posiciones": [
+        {"sector": "cen", "posicion": "El HHI agregado del SEN ha caído de 1.850 (2015) a 1.180 (2025). El mercado se ha desconcentrado. Pero el BESS tiene HHI 1.980, lo que requiere vigilancia.", "fuente": "Informe de Monitoreo 2025"},
+        {"sector": "fne", "posicion": "Vigilancia activa. La integración vertical y los contratos bilaterales son focos de fiscalización. No ha habido investigaciones recientes de gran impacto.", "fuente": "Informes FNE 2024"},
+        {"sector": "academia_uch", "posicion": "La desconcentración agregada oculta diferencias por segmento y por zona. El mercado es formalmente desconcentrado en solar/eólico pero moderadamente concentrado en térmica, hidro y BESS.", "fuente": "Estudio AC3E 2025"},
+        {"sector": "generadoras_chile", "posicion": "El mercado funciona con competencia efectiva. Los precios spot reflejan la meritocracia de despacho. La intervención regulatoria excesiva desincentiva inversión.", "fuente": "Comunicado gremial"}
+      ]
+    }
+  ],
+  "interpretacion_metodologica": "Esta sección NO pretende cerrar debates. Documenta dónde está cada sector institucional sobre temas clave del mercado. La verificación factual contrastada con datos públicos (DGA, CEN, CNE) permite al lector formarse una visión propia. Para temas donde hay acuerdo amplio (la transmisión es cuello de botella, la hidro es almacenamiento valioso), el lector puede identificarlo. Para temas donde hay discrepancia (libertad de clientes, integración vertical), el contraste permite entender los argumentos en juego.",
+  "fuentes": [
+    {"id": 1, "medio": "Ministerio de Energía - Decretos Plan de Expansión 2022-2024", "url": "https://energia.gob.cl/"},
+    {"id": 2, "medio": "CNE - Decretos y Resoluciones", "url": "https://www.cne.cl/"},
+    {"id": 3, "medio": "CEN - Reportes Mensuales y Monitoreo de Competencia", "url": "https://www.coordinador.cl/"},
+    {"id": 4, "medio": "Universidad de Chile - Estudio post-25F (AC3E)", "url": "https://uchile.cl/noticias/231269/entrevista-claudia-rahmann-directora-del-departamento-de-ingenieria"},
+    {"id": 5, "medio": "ACERA - Balance 2025", "url": "https://www.acera.cl/"},
+    {"id": 6, "medio": "Generadoras de Chile - Boletín mensual", "url": "https://generadoras.cl/"},
+    {"id": 7, "medio": "FNE - Informes de Mercado", "url": "https://www.fne.gob.cl/"},
+    {"id": 8, "medio": "Resolución Exenta 58/2024 - Umbral cliente libre", "url": "https://www.cne.cl/"}
+  ]
+}
